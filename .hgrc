@@ -1,0 +1,22 @@
+[ui]
+username = Vytautas Gimbutas
+merge = diffmerge
+
+[extensions]
+hgext.purge = 
+hgext.graphlog =
+hgext.extdiff =
+
+[defaults]
+log = --limit 8
+glog = --limit 4
+
+[extdiff]
+cmd.diffmerge = /usr/bin/diffmerge
+
+[merge-tools]
+diffmerge.executable = /usr/bin/diffmerge
+diffmerge.args = -merge -result=$output -t1="Local Version" -t2=$output -t3="Other Version" -caption=$output $local $base $other
+diffmerge.binary = False
+diffmerge.symlinks = False
+diffmerge.gui = True
