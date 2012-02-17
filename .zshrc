@@ -11,9 +11,8 @@ ZSH=$HOME/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 ZSH_THEME="mh"
 
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+# Aliases
+alias hgfpush="hg pull -u && hg merge && hg ci -m 'merged' && hg push"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
