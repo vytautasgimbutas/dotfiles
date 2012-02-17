@@ -123,8 +123,8 @@ defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 # Disable the warning before emptying the Trash
 defaults write com.apple.finder WarnOnEmptyTrash -bool false
 
-# Empty Trash securely by default
-defaults write com.apple.finder EmptyTrashSecurely -bool true
+# Empty trash not securely by default (too slow otherwise)
+defaults write com.apple.finder EmptyTrashSecurely -bool false
 
 # Ask for password (screensaver)
 defaults write com.apple.screensaver askForPassword -int 1
