@@ -2,6 +2,7 @@
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 sh $DIR/osx
+
 rm -rf ~/.vim
 rm -rf ~/.vimrc 
 rm -rf ~/.zshrc 
