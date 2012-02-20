@@ -3,7 +3,8 @@ username = Vytautas Gimbutas
 merge = diffmerge
 
 [extensions]
-hgext.ftp = /usr/lib/hg/ftp.py
+# hgext.ftp = /usr/lib/hg/ftp.py
+color =
 hgext.purge = 
 hgext.graphlog =
 hgext.extdiff =
