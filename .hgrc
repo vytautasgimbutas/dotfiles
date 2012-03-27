@@ -1,9 +1,11 @@
 [ui]
 username = Vytautas Gimbutas
 merge = diffmerge
+diff = ksdiff
 
 [extensions]
-hgext.ftp = /usr/lib/hg/ftp.py
+# hgext.ftp = /usr/lib/hg/ftp.py
+color =
 hgext.purge = 
 hgext.graphlog =
 hgext.extdiff =
@@ -14,6 +16,8 @@ glog = --limit 4
 
 [extdiff]
 cmd.diffmerge = /usr/bin/diffmerge
+cmd.ksdiff = /usr/local/bin/ksdiff-wrapper
+opts.ksdiff = hg
 
 [merge-tools]
 diffmerge.executable = /usr/bin/diffmerge
