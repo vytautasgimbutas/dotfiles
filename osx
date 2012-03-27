@@ -5,6 +5,9 @@
 # https://raw.github.com/mathiasbynens/dotfiles/master/.osx, 
 # https://raw.github.com/skwp/dotfiles/master/osx
 
+# remove delay from showing dock
+defaults write com.apple.Dock autohide-delay -float 0
+
 # ShowStatusBar
 defaults write com.apple.finder ShowStatusBar -bool true
 
