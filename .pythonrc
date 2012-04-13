@@ -7,25 +7,6 @@ import sys
 import os
 home = os.environ["HOME"]
 
-if not "bpython" in os.environ["_"]:
-    try:
-        import rlcompleter
-        import readline
-        readline.set_history_length(1000)
-        readline.parse_and_bind(open("%s/.inputrc" % home).read())
-        if sys.platform == "darwin":
-            readline.parse_and_bind("bind ^I rl_complete")
-            # screw you, libedit
-        HISTFILE = "%s/.pyhistory" % home
-        try:
-            readline.read_history_file(HISTFILE)
-        except: pass
-        import atexit
-        atexit.register(lambda: readline.write_history_file(HISTFILE))
-    except:
-        print >>sys.stderr, "Couldn't get rlcompleter + readline working."
-        raise
-
 try:
     from see import see
 except ImportError:
