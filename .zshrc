@@ -36,11 +36,5 @@ plugins=(git symfony2 osx)
 
 source $ZSH/oh-my-zsh.sh
 
-# Customize to your needs...
-export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/usr/local:/usr/sbin:/sbin:/usr/X11/bin:/usr/local/git/bin
-
-# Custom
-unsetopt correct_all
-
-PATH=$PATH:$HOME/.rvm/bin
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+# Add custom stuff
+source $HOME/.custom

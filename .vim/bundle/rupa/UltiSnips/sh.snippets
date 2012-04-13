@@ -1,0 +1,8 @@
+extends sh
+
+snippet args "idiom to loop through $*"
+for x; do case $x in
+ $1) $2;;
+esac; shift; done
+$0
+endsnippet

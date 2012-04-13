@@ -1,0 +1,10 @@
+set editing-mode vi
+set completion-ignore-case on
+set completion-prefix-display-length 2
+set blink-matching-paren on
+set show-all-if-ambiguous on
+set show-all-if-unmodified on
+
+control-j: menu-complete
+control-k: menu-complete-backward
+tab: complete

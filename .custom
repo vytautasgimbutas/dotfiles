@@ -1,0 +1,66 @@
+# Path settings
+export PATH=~/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/usr/X11/bin
+
+# zsh correcting off
+unsetopt correct_all
+
+# Python startup file
+export PYTHONSTARTUP="$HOME/.pythonrc"
+
+# Change default editor
+export EDITOR="mvim -v"
+
+# List only directories
+alias lsd='ls -l | grep "^d"'
+
+# Vim -> mvim -v
+alias vim='mvim -v'
+
+# Enhanched WHOIS lookups
+alias whois="whois -h whois-servers.net"
+
+# Undo a `git push`
+alias undopush="git push -f origin HEAD^:master"
+
+# Shortcuts
+alias d="cd ~/Dropbox"
+alias g="git"
+alias v="vim"
+alias s="subl ."
+alias la='ls -laG'
+
+# Flush Directory Service cache
+alias flush="dscacheutil -flushcache"
+
+# View HTTP traffic
+alias sniff="sudo ngrep -d 'en1' -t '^(GET|POST) ' 'tcp and port 80'"
+alias httpdump="sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
+
+# Show/hide hidden files in Finder
+alias show="defaults write com.apple.Finder AppleShowAllFiles -bool true && killall Finder"
+alias hide="defaults write com.apple.Finder AppleShowAllFiles -bool false && killall Finder"
+
+# Hide/show all desktop icons (useful when presenting)
+alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
+alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
+
+# ROT13-encode text. Works for decoding, too! ;)
+alias rot13='tr a-zA-Z n-za-mN-ZA-M'
+
+# Trim new lines and copy to clipboard
+alias c="tr -d '\n' | pbcopy"
+
+# IP addresses
+alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias ips="ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"
+
+# RVM path
+PATH=$PATH:$HOME/.rvm/bin
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+
+# Prefer US English and use UTF-8
+export LC_ALL="en_US.UTF-8"
+export LANG="en_US"
+
+# Don’t clear the screen after quitting a manual page
+export MANPAGER="less -X"

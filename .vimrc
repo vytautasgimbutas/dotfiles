@@ -1,202 +1,162 @@
-" based on http://github.com/jferris/config_files/blob/master/vimrc
+" rupa's vimrc
 
-" Use Vim settings, rather then Vi settings (much better!).
-" This must be first, because it changes other options as a side effect.
+" pathogen
+filetype off
+call pathogen#runtime_append_all_bundles()
+"filetype plugin indent on
+filetype plugin on
+
 set nocompatible
-
-" allow backspacing over everything in insert mode
+set novisualbell
 set backspace=indent,eol,start
-
-set nobackup
-set nowritebackup
-set history=50		" keep 50 lines of command line history
-set ruler		" show the cursor position all the time
-set showcmd		" display incomplete commands
-set incsearch		" do incremental searching
-
-" Don't use Ex mode, use Q for formatting
-map Q gq
-
-" This is an alternative that also works in block mode, but the deleted
-" text is lost and it only works for putting the current register.
-"vnoremap p "_dp
-
-" Switch syntax highlighting on, when the terminal has colors
-" Also switch on highlighting the last used search pattern.
-if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
-  syntax on
-  set hlsearch
-endif
-
-" Switch wrap off for everything
-set nowrap
-
-" Only do this part when compiled with support for autocommands.
-if has("autocmd")
-  " Enable file type detection.
-  " Use the default filetype settings, so that mail gets 'tw' set to 72,
-  " 'cindent' is on in C files, etc.
-  " Also load indent files, to automatically do language-dependent indenting.
-  filetype plugin indent on
-
-  " Set File type to 'text' for files ending in .txt
-  autocmd BufNewFile,BufRead *.txt setfiletype text
-
-  " Enable soft-wrapping for text files
-  autocmd FileType text,markdown,html,xhtml,eruby setlocal wrap linebreak nolist
-
-  " Put these in an autocmd group, so that we can delete them easily.
-  augroup vimrcEx
-  au!
-
-  " For all text files set 'textwidth' to 78 characters.
-  " autocmd FileType text setlocal textwidth=78
-
-  " When editing a file, always jump to the last known cursor position.
-  " Don't do it when the position is invalid or when inside an event handler
-  " (happens when dropping a file on gvim).
-  autocmd BufReadPost *
-    \ if line("'\"") > 0 && line("'\"") <= line("$") |
-    \   exe "normal g`\"" |
-    \ endif
-
-  " Automatically load .vimrc source when saved
-  autocmd BufWritePost .vimrc source $MYVIMRC
-
-  augroup END
-
-else
-
-  set autoindent		" always set autoindenting on
-
-endif " has("autocmd")
-
-" if has("folding")
-  " set foldenable
-  " set foldmethod=syntax
-  " set foldlevel=1
-  " set foldnestmax=2
-  " set foldtext=strpart(getline(v:foldstart),0,50).'\ ...\ '.substitute(getline(v:foldend),'^[\ #]*','','g').'\ '
-" endif
-
-" Softtabs, 2 spaces
-set tabstop=4
+set history=1000
+set ruler
+set showcmd
 set shiftwidth=4
+" useless if sw=1
+set smarttab
+set tabstop=4
+set softtabstop=4
 set expandtab
-
-" Always display the status line
-set laststatus=2
-
-" \ is the leader character
-let mapleader = ","
-
-" Edit the README_FOR_APP (makes :R commands work)
-map <Leader>R :e doc/README_FOR_APP<CR>
-
-" Leader shortcuts for Rails commands
-map <Leader>m :Rmodel 
-map <Leader>c :Rcontroller 
-map <Leader>v :Rview 
-map <Leader>u :Runittest 
-map <Leader>f :Rfunctionaltest 
-map <Leader>tm :RTmodel 
-map <Leader>tc :RTcontroller 
-map <Leader>tv :RTview 
-map <Leader>tu :RTunittest 
-map <Leader>tf :RTfunctionaltest 
-map <Leader>sm :RSmodel 
-map <Leader>sc :RScontroller 
-map <Leader>sv :RSview 
-map <Leader>su :RSunittest 
-map <Leader>sf :RSfunctionaltest 
-
-" Hide search highlighting
-map <Leader>h :set invhls <CR>
-
-" Opens an edit command with the path of the currently edited file filled in
-" Normal mode: <Leader>e
-map <Leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
-
-" Opens a tab edit command with the path of the currently edited file filled in
-" Normal mode: <Leader>t
-map <Leader>te :tabe <C-R>=expand("%:p:h") . "/" <CR>
-
-" Inserts the path of the currently edited file into a command
-" Command mode: Ctrl+P
-cmap <C-P> <C-R>=expand("%:p:h") . "/" <CR>
-
-" Duplicate a selection
-" Visual mode: D
-vmap D y'>p
-
-" Press Shift+P while in visual mode to replace the selection without
-" overwriting the default register
-vmap P p :call setreg('"', getreg('0')) <CR>
-
-" For Haml
-au! BufRead,BufNewFile *.haml         setfiletype haml
-
-" No Help, please
-nmap <F1> <Esc>
-
-" Press ^F from insert mode to insert the current file name
-imap <C-F> <C-R>=expand("%")<CR>
-
-" Maps autocomplete to tab
-imap <Tab> <C-N>
-
-imap <C-L> <Space>=><Space>
-
-" Display extra whitespace
-" set list listchars=tab:»·,trail:·
-
-" Edit routes
-command! Rroutes :e config/routes.rb
-command! Rschema :e db/schema.rb
-
-" Local config
-if filereadable(".vimrc.local")
-  source .vimrc.local
-endif
-
-" Use Ack instead of Grep when available
-if executable("ack")
-  set grepprg=ack\ -H\ --nogroup\ --nocolor\ --ignore-dir=tmp\ --ignore-dir=coverage
-endif
-
-" Numbers
-set number
-set numberwidth=5
-
-" Snippets are activated by Shift+Tab
-let g:snippetsEmu_key = "<S-Tab>"
-
-" Tab completion options
-" (only complete to the longest unambiguous match, and show a menu)
-set completeopt=longest,menu
-set wildmode=list:longest,list:full
-set complete=.,t
-
-" case only matters with mixed case expressions
+set noshowmatch
+set incsearch
+set whichwrap=h,l,~,[,],<,>
+set notitle
+set shortmess=aoOtTI
+set clipboard=unnamed
+set nobackup
+set hidden
 set ignorecase
 set smartcase
+set wildmenu
+set number
+set wildmode=list:longest
+set autoindent
+set encoding=utf8
+"set mouse=a
+set scrolloff=2
+set ttyfast
+set gdefault
+set nojoinspaces
 
-" Tags
-let g:Tlist_Ctags_Cmd="ctags --exclude='*.js'"
-set tags=./tags;
+" colors
+if has("gui_running") || &t_Co > 2
+    set background=dark
+    syntax enable
+    try
+        colorscheme desert256
+    catch
+        colorscheme koehler
+    endtry
+endif
 
-let g:fuf_splitPathMatching=1
+" tabs and trailing spaces
+"set listchars=tab:__,trail:_
+"set list
+" long lines
+"highlight rightMargin cterm=underline gui=underline
+"match rightMargin /\%>80v.\+/
 
-" Open URL
-command -bar -nargs=1 OpenURL :!open <args>
-function! OpenURL()
-  let s:uri = matchstr(getline("."), '[a-z]*:\/\/[^ >,;:]*')
-  echo s:uri
-  if s:uri != ""
-	  exec "!open \"" . s:uri . "\""
-  else
-	  echo "No URI found in line."
-  endif
-endfunction
-map <Leader>w :call OpenURL()<CR>
+" nice mapping for normal mode
+inoremap jj <ESC>
 
+" make Y like C/D
+nnoremap Y y$
+
+" more intuitive j/k
+nnoremap j gj
+nnoremap k gk
+
+" hardcore mode
+"nnoremap <up> <nop>
+"nnoremap <down> <nop>
+"nnoremap <left> <nop>
+"nnoremap <right> <nop>
+"inoremap <up> <nop>
+"inoremap <down> <nop>
+"inoremap <left> <nop>
+"inoremap <right> <nop>
+
+" prevent screen clearing
+set t_ti= t_te=
+
+" use normal regexes. see :help /\v
+nnoremap / /\v
+vnoremap / /\v
+
+" toggle line numbers/cursorline
+nnoremap <silent> <Leader><Leader> :set nu!<CR> :set cursorline!<CR>
+
+" strip trailing whitespace from file
+nnoremap <silent> <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
+
+" re-hardwap paragraphs of text
+nnoremap <leader>q gqap
+" unwrap paragraphs of text
+nnoremap <leader>u vipJjjj
+
+" execute file being edited
+noremap <buffer> <Leader>pl :!/usr/bin/perl % <CR>
+noremap <buffer> <Leader>py :!/usr/bin/env python % <CR>
+noremap <buffer> <Leader>sh :!/bin/bash % <CR>
+
+if has("gui_running")
+    set guioptions=aegiLt
+    if has("win32")
+        set guifont=Consolas
+    endif
+endif
+
+if has("autocmd")
+
+    " makefiles need literal tabs
+    autocmd FileType make set noexpandtab
+
+    " epub files are zip files
+    au BufReadCmd *.epub call zip#Browse(expand("<amatch>"))
+
+    " When editing a file, always jump to the last cursor position
+    autocmd BufReadPost *
+    \ if line("'\"") > 0 && line ("'\"") <= line("$") |
+    \   exe "normal g'\"" |
+    \ endif
+
+    " get completions from current syntax file
+    au BufEnter * exec('setlocal complete+=k$VIMRUNTIME/syntax/'.&ft.'.vim')
+    set iskeyword+=-,:
+
+    " change terminal size for local terminals
+    " cause i tend to like vim terminals to be longer than other ones
+    if $SSH_TTY == "" && $VIM_RESIZE != ""
+        set co=80 lines=35
+        if $VIM_RESIZE > 1
+            autocmd VimLeave * set co=80 lines=25
+        endif
+    endif
+
+    if has("gui_running")
+        " lulz
+        autocmd FocusGained * syntax on
+        autocmd FocusLost * syntax off
+    endif
+
+endif
+
+if !exists("DiffOrig")
+    command DiffOrig vert new |
+    \ set bt=nofile | r # | 0d_ | diffthis | wincmd p | diffthis
+endif
+
+" stuff for plugins
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+let g:UltiSnipsListSnippets="<c-tab>"
+
+let g:SuperTabDefaultCompletionType="context"
+
+" fix CSApprox complaining about lame terminals
+if &t_Co < 88 || !has("gui")
+    let g:CSApprox_verbose_level = 0
+    let g:CSApprox_loaded = 1
+endif
