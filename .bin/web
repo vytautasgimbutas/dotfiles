@@ -1,0 +1,38 @@
+#!/bin/sh
+mode=$1    # start or stop
+
+case "$mode" in
+  'start')
+    # Start daemon
+    mysql.server start
+    sudo nginx
+    php-fpm --fpm-config /usr/local/etc/php-fpm.conf
+
+    ;;
+  'stop')
+    # Stop 
+    mysql.server stop
+    sudo nginx -s stop
+    killall php-fpm
+
+
+    ;;
+
+  'restart')
+    # Restart
+    mysql.server start
+    sudo nginx -s stop
+    sudo nginx
+    killall php-fpm
+    php-fpm --fpm-config /usr/local/etc/php-fpm.conf
+
+    ;;
+    *)
+      # usage
+      basename=`basename "$0"`
+      echo "Usage: $basename {start|stop|restart}"
+      exit 1
+    ;;
+esac
+
+exit 0

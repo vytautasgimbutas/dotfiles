@@ -8,7 +8,7 @@ mkdir ~/bin
 sh $DIR/osx
 
 # link dotfiles
-for file in {.vim,.vimrc,.custom,.gitattributes,.gitconfig,.gitignore,.hgrc,.inputrc,.pythonrc,.zshrc}; do
+for file in {.bin,.vim,.vimrc,.custom,.gitattributes,.gitconfig,.gitignore,.hgrc,.inputrc,.pythonrc,.zshrc}; do
 	rm -rf ~/$file && ln -s $DIR/$file ~/$file
 done
 unset file
