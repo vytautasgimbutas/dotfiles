@@ -1,5 +1,5 @@
 # Path settings
-export PATH=~/.bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/usr/X11/bin:/sbin
+export PATH=~/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/usr/X11/bin:/sbin
 
 # zsh correcting off
 unsetopt correct_all
@@ -28,6 +28,7 @@ alias g="git"
 alias v="vim"
 alias s="subl ."
 alias la='ls -laG'
+alias hgfpush="hg pull -u && hg merge && hg ci -m 'merged' && hg push"
 
 # Flush Directory Service cache
 alias flush="dscacheutil -flushcache"
@@ -64,3 +65,6 @@ export LANG="en_US"
 
 # Don’t clear the screen after quitting a manual page
 export MANPAGER="less -X"
+
+# grc
+source "`brew --prefix grc`/etc/grc.bashrc"
