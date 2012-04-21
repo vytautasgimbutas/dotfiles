@@ -8,7 +8,7 @@ unsetopt correct_all
 export PYTHONSTARTUP="$HOME/.pythonrc"
 
 # Change default editor
-export EDITOR="mvim -v"
+export EDITOR="subl -w"
 
 # List only directories
 alias lsd='ls -l | grep "^d"'
