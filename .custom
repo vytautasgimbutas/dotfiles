@@ -27,7 +27,7 @@ alias d="cd ~/Dropbox"
 alias g="git"
 alias v="vim"
 alias s="subl ."
-alias la='ls -laG'
+alias la='ls -lAhFG'
 alias hgfpush="hg pull -u && hg merge && hg ci -m 'merged' && hg push"
 
 # Flush Directory Service cache
