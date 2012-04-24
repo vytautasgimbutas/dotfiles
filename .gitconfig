@@ -39,6 +39,7 @@
     up = pull
     p = push
     s = status
+    st = status
 	switch = !legit switch \"$@\"
 	branches = !legit branches
 	sprout = !legit sprout \"$@\"
