@@ -28,8 +28,8 @@ alias g="git"
 alias v="vim"
 alias s="subl ."
 alias la='ls -lAhFG'
-alias db='cd ~/Dropbox'
 alias hgfpush="hg pull -u && hg merge && hg ci -m 'merged' && hg push"
+alias hosts='sudo vim /etc/hosts'
 
 # Flush Directory Service cache
 alias flush="dscacheutil -flushcache"
