@@ -13,6 +13,7 @@ unset file
 
 # nginx, php-fpm, php
 rm /usr/local/etc/nginx/nginx.conf
+rm -rf /usr/local/etc/nginx/vhosts
 ln -s $DIR/config/nginx/nginx.conf /usr/local/etc/nginx/
 ln -s $DIR/config/nginx/vhosts /usr/local/etc/nginx/
 
