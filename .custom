@@ -43,8 +43,16 @@ alias rot13='tr a-zA-Z n-za-mN-ZA-M'
 alias flush="dscacheutil -flushcache" # Flush Directory Service cache
 
 # View HTTP traffic
-alias sniff="sudo ngrep -d 'en1' -t '^(GET|POST) ' 'tcp and port 80'" 
-alias httpdump="sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
+sniff()
+{
+  sudo ngrep -d $1 -t '^(GET|POST) ' 'tcp and port 80'
+}
+alias sniff=sniff
+httpdump()
+{
+  sudo tcpdump -i $1 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\"
+}
+alias httpdump=httpdump
 
 # Show/hide hidden files in Finder
 alias show="defaults write com.apple.Finder AppleShowAllFiles -bool true && killall Finder"
