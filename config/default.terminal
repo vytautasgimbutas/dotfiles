@@ -169,7 +169,7 @@
 	<key>DisableANSIColor</key>
 	<false/>
 	<key>EscapeNonASCIICharacters</key>
-	<true/>
+	<false/>
 	<key>Font</key>
 	<data>
 	YnBsaXN0MDDUAQIDBAUGGBlYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3AS
