@@ -1,7 +1,7 @@
 server {
   listen         80 default_server;
 
-  root            /www/public;
+  root            /Projects/public;
 
 location ~ "^(.+\.php)($|/)" {
     fastcgi_split_path_info ^(.+\.php)(.*)$;

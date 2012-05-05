@@ -3,7 +3,7 @@ server {
   server_name     .sandbox;
 
   index           index.php;
-  root            /www/sandbox;
+  root            /Projects/sandbox;
 
 location ~ "^(.+\.php)($|/)" {
     fastcgi_split_path_info ^(.+\.php)(.*)$;
