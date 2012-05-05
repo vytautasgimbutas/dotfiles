@@ -1,24 +1,23 @@
 #!/bin/bash
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-# run Mac OS X custom configuration
+# Run Mac OS X custom configuration
+echo "Running Mac OS X custom configuration..."
 sh $DIR/osx
 
-# link dotfiles
-for file in {bin,.vim,.vimrc,.custom,.gitattributes,.gitconfig,.gitignore,.hgrc,.inputrc,.pythonrc,.zshrc}; do
-	rm -rf ~/$file && ln -s $DIR/$file ~/$file
+# Link files
+files="bin .vim .vimrc .custom .giattributes .gitconfig .gitignore .hgrc .inputrc .pythonrc .zshrc"
+echo "\nLinking files..."
+for file in $files; do
+    echo "  Linking $file to ~"
+    rm -rf ~/$file
+    ln -s $DIR/$file ~/$file
 done
-unset file
-
 
 # nginx, php-fpm, php
-rm /usr/local/etc/nginx/nginx.conf
-rm -rf /usr/local/etc/nginx/vhosts
+echo "\nInstalling nginx, php-fpm, php configurations"
+rm -rf /usr/local/etc/nginx/nginx.conf /usr/local/etc/nginx/vhosts /usr/local/etc/php-fpm.conf /usr/local/etc/php.ini
 ln -s $DIR/config/nginx/nginx.conf /usr/local/etc/nginx/
 ln -s $DIR/config/nginx/vhosts /usr/local/etc/nginx/
-
-rm /usr/local/etc/php-fpm.conf
 ln -s $DIR/config/php-fpm.conf /usr/local/etc/
-
-rm /usr/local/etc/php.ini
 ln -s $DIR/config/php.ini /usr/local/etc/
