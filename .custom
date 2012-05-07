@@ -65,3 +65,20 @@ alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && k
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias ips="ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"
+
+# VirtualEnv cd
+workon_virtualenv() {
+  if [ -e .git ]; then
+    current_dir="${PWD##*/}"
+    if [ -e ~/virtualenvs/$current_dir ]; then
+      deactivate >/dev/null 2>&1
+      source ~/virtualenvs/$current_dir/bin/activate
+    fi
+  fi
+}
+
+virtualenv_cd() {
+  cd "$@" && workon_virtualenv
+}
+
+alias cd="virtualenv_cd"

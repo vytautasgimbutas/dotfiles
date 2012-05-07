@@ -1,6 +1,10 @@
 #!/bin/sh
-DATE=$(date +"%m-%d-%y")
+DATE=$(date +"%y-%m-%d")
 
-tar -czPf /Users/vytautasgimbutas/projects.tar /Users/vytautasgimbutas/Projects
-rsync -az /Users/vytautasgimbutas/projects.tar /Users/vytautasgimbutas/Dropbox/backup/$DATE/
-rm /Users/vytautasgimbutas/projects.tar
+# Backup projects directory
+tar -czPf $HOME/projects.tar $HOME/Projects
+rsync -az $HOME/projects.tar $HOME/Dropbox/backup/$DATE/
+rm $HOME/projects.tar
+
+# Delete old ones (after 30 days)
+find $HOME/Dropbox/backup/* -type d -mtime +30 -exec rm -rf {} \; 
