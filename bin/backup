@@ -1,10 +1,13 @@
 #!/bin/sh
 DATE=$(date +"%y-%m-%d")
 
+# Google Drive / Dropbox
+TO="$HOME/Google Drive/"
+
 # Backup projects directory
 tar -czPf $HOME/projects.tar $HOME/Projects
-rsync -az $HOME/projects.tar $HOME/Dropbox/backup/$DATE/
+rsync -az $HOME/projects.tar "$TO/backups/$DATE/"
 rm $HOME/projects.tar
 
 # Delete old ones (after 30 days)
-find $HOME/Dropbox/backup/* -type d -mtime +30 -exec rm -rf {} \; 
+find "$TO/backups/" -type d -mtime +30 -exec rm -rf {} \; 

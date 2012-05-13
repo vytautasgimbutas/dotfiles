@@ -1,0 +1,17 @@
+#!/bin/sh
+mode=$1
+
+case "$mode" in
+  'blog')
+    cd /Users/vytautasgimbutas/Projects/blog && bundle exec rake generate && bundle exec rake deploy
+
+    ;;
+    *)
+      # usage
+      basename=`basename "$0"`
+      echo "Usage: $basename {blog}"
+      exit 1
+    ;;
+esac
+
+exit 0
