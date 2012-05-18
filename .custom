@@ -82,6 +82,3 @@ virtualenv_cd() {
 }
 
 alias cd="virtualenv_cd"
-
-# my vps refs
-alias refs="echo http\:\/\/www.serveriai.lt\/rekomenduoti.php?ejhuSHljNAkxCWVjNjQ"
