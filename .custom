@@ -82,3 +82,6 @@ virtualenv_cd() {
 }
 
 alias cd="virtualenv_cd"
+
+# got bored of writing bundle exec every time
+rake() { if [ -e ./Gemfile.lock ]; then bundle exec rake "$@"; else /usr/bin/env rake "$@"; fi; }
