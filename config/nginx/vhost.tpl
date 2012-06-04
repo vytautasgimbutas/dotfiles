@@ -1,9 +1,9 @@
 server {
   listen         80;
-  server_name     .pma;
+  server_name     .domain.tld;
 
   index           index.php;
-  root            /Projects/pma;
+  root            /Projects/domain.tld;
 
 location ~ "^(.+\.php)($|/)" {
     fastcgi_split_path_info ^(.+\.php)(.*)$;
