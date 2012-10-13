@@ -10,4 +10,4 @@ rsync -az $HOME/projects.tar "$TO/backups/$DATE/"
 rm $HOME/projects.tar
 
 # Delete old ones (after 10 days)
-find "$TO/backups/" -type d -mtime +10 -exec rm -rf {} \; 
+find "$TO/backups/" -type d -mtime +10 -exec rm -rf {} \; &> /dev/null 
