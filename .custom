@@ -1,24 +1,13 @@
 # Path settings
-export PATH=~/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/usr/X11/bin:/sbin
-# RVM PATH
-PATH=$PATH:$HOME/.rvm/bin
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+export PATH=~/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/usr/X11/bin:/sbin:$HOME/.rvm/bin
 
-# zsh correcting off
-unsetopt correct_all
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
 # Python startup file
 export PYTHONSTARTUP="$HOME/.pythonrc"
 
 # Change default editor
-export EDITOR="subl -w"
-
-# Prefer US English and use UTF-8
-export LC_ALL="en_US.UTF-8"
-export LANG="en_US"
-
-# Don’t clear the screen after quitting a manual page
-export MANPAGER="less -X"
+export EDITOR="vim"
 
 # grc
 source "`brew --prefix grc`/etc/grc.bashrc"
@@ -36,6 +25,7 @@ alias g="git"
 alias v="vim"
 alias s="subl ."
 alias la='ls -lAhFG'
+alias l="la"
 alias hgfpush="hg pull -u && hg merge && hg ci -m 'merged' && hg push"
 alias hosts='sudo vim /etc/hosts'
 alias c="tr -d '\n' | pbcopy" # Trim new lines and copy to clipboard
@@ -83,7 +73,10 @@ virtualenv_cd() {
 
 alias cd="virtualenv_cd"
 
-# got bored of writing bundle exec every time
-rake() { if [ -e ./Gemfile.lock ]; then bundle exec rake "$@"; else /usr/bin/env rake "$@"; fi; }
-
+#tmux
 [[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
+
+# vim using
+alias vim="mvim"
+
+alias rm='nocorrect rm'

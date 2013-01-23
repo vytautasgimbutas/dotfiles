@@ -6,7 +6,7 @@ ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="mh"
 DISABLE_AUTO_UPDATE="true"
 
-source $ZSH/oh-my-zsh.sh
+#source $ZSH/oh-my-zsh.sh
 source $HOME/.custom
 
 if [ -f ~/.custom_job_stuff ]; then . ~/.custom_job_stuff; fi

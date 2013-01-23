@@ -1,0 +1,20 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=3059
+
+With Easy Vim [1], the code to perform a last position jump [2] can't restore a cursor position beyond EOL, because the jump will be executed in Normal mode [3].  The result in this case is a by-one error [4], so most people [5] won't find that annoying ...
+
+The good news is that Vim seems to store a correct value in the viminfo file -- one solution is to restore the last position while in Insert mode, which is what the plugin does.
+
+Easy Vim actually is not required, the plugin will also work with a normal setup, or when you use  :startinsert  in the vimrc to merely start up in Insert mode.
+
+The code is slightly more cautious than the original: the cursor won't be moved if something else already moved it, or if the buffer is special (help buffer, etc.).  Furthermore, to fix [6] a related case [7], the BufWinEnter autocommand is used instead of BufReadPost.
+
+This lengthy description applies for a rather short piece of code.
+
+[1] :help 'insertmode' or :help -y
+[2] :h last-position-jump
+[3] explanation http://groups.google.com/group/vim_use/msg/c571f994f211f8fe
+[4] the position is almost right, no issue for Bram: http://groups.google.com/group/vim_dev/msg/fbcffe406ff01b7f
+[5] especially of the few Easy vimmers
+[6] not sure if "modify" is the better word as what follows is probably not a bug
+[7] Cursor column not remembered ... http://groups.google.com/group/vim_dev/msg/b3512cecaab3e0b1
+
