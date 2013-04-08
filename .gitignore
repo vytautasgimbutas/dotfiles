@@ -1,3 +1,5 @@
 .DS_Store
 .idea
 .vim/backups
+.vim/.netrwhist
+.vim/bundle/mattn-gist-vim/doc/tags
