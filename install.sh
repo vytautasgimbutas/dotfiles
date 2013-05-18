@@ -15,6 +15,6 @@ for file in $files; do
 done
 
 # zprezto
-for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
-  ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
+for rcfile in "$$HOME"/.zprezto/runcoms/^README.md(.N); do
+  ln -s "$rcfile" "$$HOME/.${rcfile:t}"
 done
