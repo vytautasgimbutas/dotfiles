@@ -19,3 +19,5 @@ export LANG=en_US.UTF-8
 source $HOME/.custom
 
 # if [ -f ~/.custom_job_stuff ]; then . ~/.custom_job_stuff; fi
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
