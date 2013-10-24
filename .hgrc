@@ -2,6 +2,7 @@
 username = Vytautas Gimbutas
 merge = diffmerge
 diff = ksdiff
+ignore = ~/.hgignore
 
 [extensions]
 # hgext.ftp = /usr/lib/hg/ftp.py
