@@ -2,9 +2,14 @@
 
 # remove delay from showing dock
 defaults write com.apple.Dock autohide-delay -float 0
+# Remove the animation when hiding/showing the Dock
+defaults write com.apple.dock autohide-time-modifier -float 0
 
 # ShowStatusBar
 defaults write com.apple.finder ShowStatusBar -bool true
+
+# Finder: allow text selection in Quick Look
+defaults write com.apple.finder QLEnableTextSelection -bool true
 
 # ShowPathbar
 defaults write com.apple.finder ShowPathbar -bool true
@@ -76,8 +81,7 @@ defaults write enable-spring-load-actions-on-all-items -bool true
 # Show indicator lights for open applications in the Dock
 defaults write com.apple.dock show-process-indicators -bool true
 
-# Animate opening applications from the Dock
-defaults write com.apple.dock launchanim -bool true
+defaults write com.apple.dock launchanim -bool false
 
 # Disable press-and-hold for keys in favor of key repeat
 defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
@@ -189,6 +193,14 @@ unset file
 
 # Interesting stuff
 sudo nvram boot-args="-v"
+
+# disable animations and etc
+defaults write com.apple.dock expose-animation-duration -float 0.1
+defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
+defaults write com.apple.finder DisableAllAnimations -bool true
+
+# Automatically quit printer app once the print jobs complete
+defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
 
 # You still need to restart
 
