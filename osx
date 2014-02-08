@@ -196,6 +196,8 @@ sudo nvram boot-args="-v"
 
 # disable animations and etc
 defaults write com.apple.dock expose-animation-duration -float 0.1
+defaults write com.apple.dock expose-group-by-app -bool false
+
 defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
 defaults write com.apple.finder DisableAllAnimations -bool true
 
