@@ -6,7 +6,7 @@ echo "Running Mac OS X custom configuration..."
 sh $DIR/osx.sh
 
 # Link files
-files="bin .zprezto .vim .vimrc .custom .gitattributes .gitconfig .gitignore .hgrc .inputrc .pythonrc .zshrc"
+files="bin .vim .vimrc .custom .gitattributes .gitconfig .gitignore .hgrc .inputrc .pythonrc"
 echo "\nLinking files..."
 for file in $files; do
     echo "  Linking $file to ~"
@@ -14,11 +14,18 @@ for file in $files; do
     ln -s $DIR/$file ~/$file
 done
 
-# zprezto
-for rcfile in "$$HOME"/.zprezto/runcoms/^README.md(.N); do
-  ln -s "$rcfile" "$$HOME/.${rcfile:t}"
+# zshrc
+git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
+setopt EXTENDED_GLOB
+for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
+  ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
 done
 
+chsh -s /bin/zsh
+
+rm ~/.zshrc ~/.zpreztorc
+ln -s $DIR/zprezto/zshrc ~/.zshrc
+ln -s $DIR/zprezto/zpreztorc ~/.zpreztorc
 
 # brew
 if test ! $(which brew); then
@@ -66,7 +73,6 @@ binaries=(
     libxslt
     mcrypt
     node
-    php54
     php56-igbinary
     php56-pdo-pgsql
     php56-zookeeper
