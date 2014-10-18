@@ -10,7 +10,7 @@ export PYTHONSTARTUP="$HOME/.pythonrc"
 export EDITOR="vim"
 
 # grc
-source "`brew --prefix grc`/etc/grc.bashrc"
+#source "`brew --prefix grc`/etc/grc.bashrc"
 
 # Shortcuts
 alias whois="whois -h whois-servers.net" # Enhanched WHOIS lookups

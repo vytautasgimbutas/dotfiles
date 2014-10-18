@@ -42,7 +42,7 @@ brew install homebrew/dupes/grep
 
 binaries=(
     apachetop
-    boris
+    homebrew/php/boris
     dnsmasq
     freetype
     glib
@@ -58,7 +58,6 @@ binaries=(
     php56-memcached
     php56-xhprof
     popt
-    rabbitmq-c
     unixodbc
     zookeeper
     apple-gcc42
@@ -97,11 +96,9 @@ binaries=(
     phpunit
     pwgen
     redis
-    wkhtmltopdf
     automake
     composer
     fish
-    gfortran
     graphviz
     httpie
     isl
@@ -120,8 +117,6 @@ binaries=(
     boost
     coreutils
     freetds
-    ghostscript
-    grc
     icu4c
     jbig2dec
     libksba
@@ -140,3 +135,30 @@ binaries=(
 
 brew install ${binaries[@]}
 brew cleanup
+
+# dnsmasq .dev
+mkdir -pv $(brew --prefix)/etc/
+echo 'address=/.dev/127.0.0.1' > $(brew --prefix)/etc/dnsmasq.conf
+sudo cp -v $(brew --prefix dnsmasq)/homebrew.mxcl.dnsmasq.plist /Library/LaunchDaemons
+sudo launchctl load -w /Library/LaunchDaemons/homebrew.mxcl.dnsmasq.plist
+sudo mkdir -v /etc/resolver
+sudo bash -c 'echo "nameserver 127.0.0.1" > /etc/resolver/dev'
+
+# memcached
+ln -sfv /usr/local/opt/memcached/*.plist ~/Library/LaunchAgents            
+launchctl load ~/Library/LaunchAgents/homebrew.mxcl.memcached.plist
+
+# percona-server
+ln -sfv /usr/local/opt/percona-server/*.plist ~/Library/LaunchAgents
+launchctl load ~/Library/LaunchAgents/homebrew.mxcl.percona-server.plist
+
+# rabbitmq
+ln -sfv /usr/local/opt/rabbitmq/*.plist ~/Library/LaunchAgents
+launchctl load ~/Library/LaunchAgents/homebrew.mxcl.rabbitmq.plist
+
+
+# elasticsearch
+ln -sfv /usr/local/opt/elasticsearch/*.plist ~/Library/LaunchAgents
+launchctl load ~/Library/LaunchAgents/homebrew.mxcl.elasticsearch.plist
+
+
