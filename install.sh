@@ -6,7 +6,7 @@ echo "Running Mac OS X custom configuration..."
 sh $DIR/osx.sh
 
 # Link files
-files="bin .vim .vimrc .custom .gitattributes .gitconfig .gitignore .hgrc .inputrc .pythonrc"
+files="bin .vim .vimrc .custom .gitattributes .gitconfig .gitignore .hgignore .hgrc .inputrc .pythonrc"
 echo "\nLinking files..."
 for file in $files; do
     echo "  Linking $file to ~"
