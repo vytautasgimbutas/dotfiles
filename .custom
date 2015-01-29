@@ -1,7 +1,10 @@
 # Path settings
-export PATH=~/bin:~/evp/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/usr/X11/bin:/sbin:$HOME/.rvm/bin:/usr/local/share/npm/bin:$HOME/dev/play-2.2.0:$HOME/dev/arcanist/arcanist/bin:$HOME/dev/android-sdk-macosx/platform-tools:$HOME/dev/android-sdk-macosx/tools:$HOME/dev/android-sdk-macosx/build-tools/19.1.0
+export PATH=~/bin:~/evp/bin:/usr/local/bin::/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/usr/X11/bin:/sbin:$HOME/.rvm/bin:/usr/local/share/npm/bin:$HOME/dev/play-2.2.0:$HOME/dev/arcanist/arcanist/bin:$HOME/dev/android-sdk-macosx/platform-tools:$HOME/dev/android-sdk-macosx/tools:$HOME/dev/android-sdk-macosx/build-tools/19.1.0
 export ANDROID_HOME=~/dev/android-sdk-macosx
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+
+# xdebug
+export XDEBUG_CONFIG="idekey=PHPSTORM"
 
 # Python startup file
 export PYTHONSTARTUP="$HOME/.pythonrc"
