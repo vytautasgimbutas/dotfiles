@@ -1,10 +1,14 @@
 # Path settings
-export PATH=~/bin:~/evp/bin:/usr/local/bin::/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/usr/X11/bin:/sbin:$HOME/.rvm/bin:/usr/local/share/npm/bin:$HOME/dev/play-2.2.0:$HOME/dev/arcanist/arcanist/bin:$HOME/dev/android-sdk-macosx/platform-tools:$HOME/dev/android-sdk-macosx/tools:$HOME/dev/android-sdk-macosx/build-tools/19.1.0
-export ANDROID_HOME=~/dev/android-sdk-macosx
+export PATH=~/bin:~/evp/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/usr/X11/bin:/sbin:$HOME/.rvm/bin:/usr/local/share/npm/bin:$HOME/dev/arcanist/arcanist/bin
+export ANDROID_HOME=/usr/local/opt/android-sdk
+
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
 # xdebug
-export XDEBUG_CONFIG="idekey=PHPSTORM"
+enable_xdebug() {
+    export XDEBUG_CONFIG="idekey=PHPSTORM"
+}
+alias enable_xdebug=enable_xdebug
 
 # Python startup file
 export PYTHONSTARTUP="$HOME/.pythonrc"
@@ -16,9 +20,6 @@ export EDITOR="vim"
 #source "`brew --prefix grc`/etc/grc.bashrc"
 
 # Shortcuts
-alias whois="whois -h whois-servers.net" # Enhanched WHOIS lookups
-alias undopush="git push -f origin HEAD^:master" # Undo a `git push`
-alias lsd='ls -l | grep "^d"' # list only directories
 alias vim='mvim -v'
 alias d="cd ~/Dropbox"
 alias o="open ."
@@ -26,10 +27,8 @@ alias ..="cd .."
 alias ...="cd ../.."
 alias g="git"
 alias v="vim"
-alias s="subl ."
 alias la='ls -lAhFG'
 alias l="la"
-alias hgfpush="hg pull -u && hg merge && hg ci -m 'merged' && hg push"
 alias hosts='sudo vim /etc/hosts'
 alias c="tr -d '\n' | pbcopy" # Trim new lines and copy to clipboard
 alias rot13='tr a-zA-Z n-za-mN-ZA-M'
@@ -48,8 +47,8 @@ httpdump()
 alias httpdump=httpdump
 
 # Show/hide hidden files in Finder
-alias show="defaults write com.apple.Finder AppleShowAllFiles -bool true && killall Finder"
-alias hide="defaults write com.apple.Finder AppleShowAllFiles -bool false && killall Finder"
+alias show_all_files="defaults write com.apple.Finder AppleShowAllFiles -bool true && killall Finder"
+alias hide_all_files="defaults write com.apple.Finder AppleShowAllFiles -bool false && killall Finder"
 
 # Hide/show all desktop icons (useful when presenting)
 alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
@@ -58,25 +57,5 @@ alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && k
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias ips="ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"
-
-# VirtualEnv cd
-workon_virtualenv() {
-  if [ -e .git ]; then
-    current_dir="${PWD##*/}"
-    if [ -e ~/virtualenvs/$current_dir ]; then
-      deactivate >/dev/null 2>&1
-      source ~/virtualenvs/$current_dir/bin/activate
-    fi
-  fi
-}
-
-virtualenv_cd() {
-  cd "$@" && workon_virtualenv
-}
-
-alias cd="virtualenv_cd"
-
-# vim using
-alias vim="mvim"
 
 alias rm='nocorrect rm'

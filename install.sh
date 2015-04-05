@@ -33,9 +33,7 @@ if test ! $(which brew); then
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
-brew install coreutils
-
-brew install findutils
+brew install coreutils findutils
 
 brew tap homebrew/dupes
 brew install homebrew/dupes/grep
@@ -131,6 +129,12 @@ binaries=(
     rabbitmq
     tidy
     zlib
+    android-sdk
+    android-ndk
+    ngrep
+
+    play22
+    typesafe-activator
 )
 
 brew install ${binaries[@]}
@@ -156,9 +160,6 @@ launchctl load ~/Library/LaunchAgents/homebrew.mxcl.percona-server.plist
 ln -sfv /usr/local/opt/rabbitmq/*.plist ~/Library/LaunchAgents
 launchctl load ~/Library/LaunchAgents/homebrew.mxcl.rabbitmq.plist
 
-
 # elasticsearch
 ln -sfv /usr/local/opt/elasticsearch/*.plist ~/Library/LaunchAgents
 launchctl load ~/Library/LaunchAgents/homebrew.mxcl.elasticsearch.plist
-
-
