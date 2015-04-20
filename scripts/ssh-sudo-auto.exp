@@ -1,0 +1,18 @@
+#!/usr/bin/expect
+
+log_user 0
+set timeout 20
+
+set username [lindex $argv 0]
+set password [lindex $argv 1]
+set target [lindex $argv 2]
+set hostname [lindex $argv 3]
+
+spawn ssh -t $hostname sudo -i -u $target bash
+
+expect "password for $username:" { send $password }
+send "\n"
+
+interact
+
+exit

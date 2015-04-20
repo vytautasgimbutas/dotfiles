@@ -17,10 +17,10 @@ export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
 source $HOME/.custom
+if [ -f $HOME/.evp_custom ]; then
+    source $HOME/.evp_custom
+fi
 
 export MAVEN_OPTS="-Xms256m -Xmx1024m -XX:MaxPermSize=512m"
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
-
-
-# if [ -f ~/.custom_job_stuff ]; then . ~/.custom_job_stuff; fi
