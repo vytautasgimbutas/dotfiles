@@ -55,6 +55,12 @@ binaries=(
     php56-gearman
     php56-memcached
     php56-xhprof
+    php56-opcache
+    php56-apcu
+    php56-libevent
+    php56-msgpack
+    php56-mysqlnd_ms
+    php56-protobuf
     popt
     unixodbc
     zookeeper
@@ -123,17 +129,14 @@ binaries=(
     mhash
     pcre
     php56-crypto
-    php56-memcache
     php56-xdebug
     pkg-config
     rabbitmq
-    tidy
     zlib
     android-sdk
     android-ndk
     ngrep
 
-    play22
     typesafe-activator
 )
 
