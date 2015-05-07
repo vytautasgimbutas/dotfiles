@@ -138,6 +138,7 @@ binaries=(
     ngrep
 
     typesafe-activator
+    nginx
 )
 
 brew install ${binaries[@]}
@@ -166,3 +167,12 @@ launchctl load ~/Library/LaunchAgents/homebrew.mxcl.rabbitmq.plist
 # elasticsearch
 ln -sfv /usr/local/opt/elasticsearch/*.plist ~/Library/LaunchAgents
 launchctl load ~/Library/LaunchAgents/homebrew.mxcl.elasticsearch.plist
+
+# nginx
+ln -sfv /usr/local/opt/nginx/*.plist ~/Library/LaunchAgents
+launchctl load ~/Library/LaunchAgents/homebrew.mxcl.nginx.plist
+
+# php5-fpm
+ln -sfv /usr/local/opt/php56/*.plist ~/Library/LaunchAgents
+launchctl load ~/Library/LaunchAgents/homebrew.mxcl.php56.plist
+
