@@ -1,5 +1,10 @@
 # Path settings
 export PATH=~/bin:~/evp/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/usr/X11/bin:/sbin:$HOME/.rvm/bin:/usr/local/share/npm/bin:$HOME/dev/arcanist/arcanist/bin
+
+# Wildfly application server
+export JBOSS_HOME=/usr/local/opt/wildfly-as/libexec
+export PATH=${PATH}:${JBOSS_HOME}/bin
+
 export ANDROID_HOME=/usr/local/opt/android-sdk
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
@@ -20,7 +25,7 @@ export EDITOR="vim"
 #source "`brew --prefix grc`/etc/grc.bashrc"
 
 # Shortcuts
-alias vim='mvim -v'
+alias vim='mvim'
 alias d="cd ~/Dropbox"
 alias o="open ."
 alias ..="cd .."

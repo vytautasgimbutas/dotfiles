@@ -49,6 +49,7 @@ $assignments = array(
     ),
     12 => array(
         'com.apple.mail',
+        'com.viber.osx',
     ),
     13 => array(
         // reserved for terminal
