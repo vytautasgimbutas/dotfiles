@@ -16,8 +16,10 @@ $assignments = array(
     ),
     4 => array(
         'com.skype.skype',
+        'com.tinyspeck.slackmacgap',
         'com.codeux.irc.textual5.trial',
         'com.apple.ichat',
+        'me.rsms.fbmessenger',
     ),
     5 => array(
         'com.apple.terminal',
