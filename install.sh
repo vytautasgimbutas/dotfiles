@@ -39,6 +39,10 @@ brew tap homebrew/dupes
 brew install homebrew/dupes/grep
 
 binaries=(
+    icdiff 
+    pandoc 
+    moreutils
+    watch
     apachetop
     homebrew/php/boris
     dnsmasq

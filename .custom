@@ -59,6 +59,11 @@ alias hide_all_files="defaults write com.apple.Finder AppleShowAllFiles -bool fa
 alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
 alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
 
+# Mutable Dock
+alias mutabledock='defaults write com.apple.dock contents-immutable -bool false && killall Dock'
+alias immutabledock='defaults write com.apple.dock contents-immutable -bool false && killall Dock'
+
+
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias ips="ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"
