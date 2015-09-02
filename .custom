@@ -61,7 +61,7 @@ alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && k
 
 # Mutable Dock
 alias mutabledock='defaults write com.apple.dock contents-immutable -bool false && killall Dock'
-alias immutabledock='defaults write com.apple.dock contents-immutable -bool false && killall Dock'
+alias immutabledock='defaults write com.apple.dock contents-immutable -bool true && killall Dock'
 
 
 # IP addresses
