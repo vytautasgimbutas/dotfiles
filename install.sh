@@ -54,6 +54,7 @@ binaries=(
     libmemcached
     libxml2
     maven
+    gradle
     mpfr
     percona-server
     php56-gearman
