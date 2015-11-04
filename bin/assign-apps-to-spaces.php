@@ -12,6 +12,7 @@ $assignments = array(
     ),
     3 => array(
         'com.jetbrains.appcode',
+        'com.jetbrains.appcode-eap',
         'com.jetbrains.intellij',
         'com.jetbrains.intellij-eap',
         'com.google.android.studio',

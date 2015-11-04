@@ -119,6 +119,7 @@ binaries=(
     php56-amqp
     php56-mcrypt
     php56-thrift
+    php56-intl
     pidof
     qt
     sbt
@@ -144,6 +145,12 @@ binaries=(
 
     typesafe-activator
     nginx
+    tree
+
+    hadoop
+    spark
+
+    wildfly-as
 )
 
 brew install ${binaries[@]}
