@@ -23,7 +23,7 @@ done
 
 chsh -s /bin/zsh
 
-rm ~/.zshrc ~/.zpreztorc
+rm -rf ~/.zshrc ~/.zpreztorc
 ln -s $DIR/zprezto/zshrc ~/.zshrc
 ln -s $DIR/zprezto/zpreztorc ~/.zpreztorc
 
@@ -39,6 +39,7 @@ brew tap homebrew/dupes
 brew install homebrew/dupes/grep
 
 binaries=(
+    macvim
     icdiff 
     pandoc 
     moreutils
