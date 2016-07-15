@@ -189,3 +189,7 @@ launchctl load ~/Library/LaunchAgents/homebrew.mxcl.nginx.plist
 ln -sfv /usr/local/opt/php56/*.plist ~/Library/LaunchAgents
 launchctl load ~/Library/LaunchAgents/homebrew.mxcl.php56.plist
 
+
+# rvm
+\curl -sSL https://get.rvm.io | bash -s stable --ruby
+gem install cocoapods

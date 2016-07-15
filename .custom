@@ -1,5 +1,5 @@
 # Path settings
-export PATH=~/bin:~/evp/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/usr/X11/bin:/sbin:$HOME/.rvm/bin:/usr/local/share/npm/bin:$HOME/dev/arcanist/arcanist/bin
+export PATH=~/bin:~/evp/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/usr/X11/bin:/sbin:$HOME/.rvm/bin:/usr/local/share/npm/bin:$HOME/dev/arcanist/arcanist/bin:$HOME/dev/r/pdotfiles/bin
 
 # Wildfly application server
 export JBOSS_HOME=/usr/local/opt/wildfly-as/libexec

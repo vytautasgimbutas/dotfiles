@@ -41,6 +41,7 @@ $assignments = array(
         'com.apple.iwork.pages',
         'org.libreoffice.script',
         'com.apple.ical',
+        'com.flexibits.fantastical2.mac',
     ),
     9 => array(
         // reserved for browsers
@@ -62,6 +63,7 @@ $assignments = array(
     14 => array(
         'com.postgresapp.postgres',
         'com.sequelpro.sequelpro',
+        'com.jetbrains.datagrip',
     ),
     15 => array(
         'com.agilebits.onepassword4',
@@ -88,6 +90,9 @@ $monitors = $data['SpacesDisplayConfiguration']['Management Data']['Monitors'];
 $spacesUuids = array();
 foreach ($monitors as $monitor) {
     $spaces = $monitor['Spaces'];
+    if ($monitor['Display Identifier'] == 'F466F621-B5FA-04A0-0800-CFA6C258DECD') {
+        continue;
+    }
 
     foreach ($spaces as $space) {
         $spaceUuids[] = $space['uuid'];
