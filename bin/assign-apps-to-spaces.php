@@ -18,6 +18,7 @@ $assignments = array(
         'com.google.android.studio',
     ),
     4 => array(
+        'chat.rocket',
         'com.skype.skype',
         'com.tinyspeck.slackmacgap',
         'com.codeux.irc.textual5.trial',
@@ -89,6 +90,10 @@ $monitors = $data['SpacesDisplayConfiguration']['Management Data']['Monitors'];
 
 $spacesUuids = array();
 foreach ($monitors as $monitor) {
+    if (!isset($monitor['Spaces'])) {
+        continue;
+    }
+
     $spaces = $monitor['Spaces'];
     if ($monitor['Display Identifier'] == 'F466F621-B5FA-04A0-0800-CFA6C258DECD') {
         continue;
