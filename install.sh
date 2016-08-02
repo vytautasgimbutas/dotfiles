@@ -197,3 +197,5 @@ npm install -g diff-so-fancy
 gem install cocoapods
 
 
+# install for each user
+git clone https://github.com/powerline/fonts.git && cd fonts && ./install.sh
