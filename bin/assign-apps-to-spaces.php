@@ -11,6 +11,7 @@ $assignments = array(
         'com.jetbrains.pycharm',
     ),
     3 => array(
+        'com.apple.dt.xcode',
         'com.jetbrains.appcode',
         'com.jetbrains.appcode-eap',
         'com.jetbrains.intellij',
@@ -51,11 +52,11 @@ $assignments = array(
         'org.vim.macvim',
     ),
     11 => array(
-        'com.apple.dt.xcode',
         'com.jetbrains.rubymine',
     ),
     12 => array(
         'com.apple.mail',
+        'it.bloop.airmail.beta11',
         'com.viber.osx',
     ),
     13 => array(
