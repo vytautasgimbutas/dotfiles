@@ -172,9 +172,6 @@ sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo Hos
 # Restart automatically if the computer freezes
 sudo systemsetup -setrestartfreeze on
 
-# Disable Notification Center and remove the menu bar icon
-launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist 2> /dev/null
-
 echo ""
 echo "Never go into computer sleep mode"
 systemsetup -setcomputersleep Off > /dev/null
@@ -211,7 +208,8 @@ defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 
 echo ""
 echo "Setting a blazingly fast keyboard repeat rate (ain't nobody got time fo special chars while coding!)"
-defaults write NSGlobalDomain KeyRepeat -int 0
+defaults write NSGlobalDomain KeyRepeat -int 2
+defaults write NSGlobalDomain InitialKeyRepeat -int 30
 
 echo ""
 echo "Disabling auto-correct"
