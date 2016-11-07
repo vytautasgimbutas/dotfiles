@@ -1,5 +1,6 @@
 # IDE settings
 .idea
+.deco
 
 .vim/backups
 .vim/.netrwhist
@@ -17,3 +18,4 @@ Thumbs.db
 
 VytautasTest.java
 VytautasTestCommand.php
+*.iml
