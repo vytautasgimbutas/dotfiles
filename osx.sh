@@ -370,6 +370,8 @@ echo ""
 echo "Disable annoying backswipe in Chrome"
 defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool false
 
+launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist
 
 find ~/Library/Application\ Support/Dock -name "*.db" -maxdepth 1 -delete
 echo "Restart"
+

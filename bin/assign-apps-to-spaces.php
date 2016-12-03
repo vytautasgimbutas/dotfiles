@@ -96,14 +96,12 @@ foreach ($monitors as $monitor) {
     }
 
     $spaces = $monitor['Spaces'];
-    if ($monitor['Display Identifier'] == 'F466F621-B5FA-04A0-0800-CFA6C258DECD') {
-        continue;
-    }
 
     foreach ($spaces as $space) {
         $spaceUuids[] = $space['uuid'];
     }
 }
+
 
 foreach ($spaceUuids as $i => $spaceUuid) {
     $spaceAssignments = $assignments[++$i];
