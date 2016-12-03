@@ -30,8 +30,9 @@ $assignments = array(
         'com.apple.terminal',
     ),
     6 => array(
-        'dia',
-        'com.torusknot.sourcetreenotmas',
+        'com.postgresapp.postgres',
+        'com.sequelpro.sequelpro',
+        'com.jetbrains.datagrip',
     ),
     7 => array(
         'com.apple.photos',
@@ -53,6 +54,8 @@ $assignments = array(
     ),
     11 => array(
         'com.jetbrains.rubymine',
+        'com.genymobile.player',
+        'com.apple.iphonesimulator',
     ),
     12 => array(
         'com.apple.mail',
@@ -60,12 +63,10 @@ $assignments = array(
         'com.viber.osx',
     ),
     13 => array(
-        // reserved for terminal
     ),
     14 => array(
-        'com.postgresapp.postgres',
-        'com.sequelpro.sequelpro',
-        'com.jetbrains.datagrip',
+        'com.torusknot.sourcetreenotmas',
+        'dia',
     ),
     15 => array(
         'com.agilebits.onepassword4',
