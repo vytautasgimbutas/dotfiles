@@ -1,5 +1,6 @@
 # Path settings
 export PATH=~/bin:~/evp/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/usr/X11/bin:/sbin:$HOME/.rvm/bin:/usr/local/share/npm/bin:$HOME/dev/arcanist/arcanist/bin:$HOME/dev/r/pdotfiles/bin
+export PATH=$PATH:~/.composer/vendor/bin
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home
 
 # Wildfly application server
@@ -61,3 +62,8 @@ alias rm='nocorrect rm'
 
 alias hstart="start-dfs.sh;start-yarn.sh"
 alias hstop="stop-yarn.sh;stop-dfs.sh"
+
+
+function light() {
+  highlight -O rtf $2 --syntax $1 --font Inconsolata --style $3 --font-size 24  -W -J 50 -j 3 | pbcopy
+}
