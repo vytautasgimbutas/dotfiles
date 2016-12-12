@@ -33,6 +33,36 @@ if test ! $(which brew); then
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
+# Casks
+brew cask install dropbox
+brew cask install alfred
+brew cask install 1password
+brew cask install genymotion
+brew cask install iterm2
+brew cask install moom
+brew cask install rocket-chat
+brew cask install sourcetree
+brew cask install transmission
+brew cask install google-chrome
+brew cask install firefox
+brew cask install diffmerge
+brew cask install calibre
+brew cask install the-unarchiver
+brew cask install trim-enabler
+brew cask install vlc
+brew cask install jd-gui
+brew cask install virtualbox
+brew cask install spotify
+brew cask install bettertouchtool
+brew cask install sketch
+brew cask install android-studio intellij-idea phpstorm appcode macvim
+brew cask install atom
+brew cask install colorsnapper
+brew cask install deco
+brew cask install docker
+brew cask install skype
+
+# other stuff
 brew install coreutils findutils
 
 brew tap homebrew/dupes
