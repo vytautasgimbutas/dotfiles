@@ -348,9 +348,9 @@
 	<key>LoadPrefsFromCustomFolder</key>
 	<true/>
 	<key>NSNavLastRootDirectory</key>
-        <string>~/dev/r/dotfiles</string>
+	<string>~/dev/r/dotfiles</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
-        <string>{712, 459}</string>
+	<string>{712, 448}</string>
 	<key>NSQuotedKeystrokeBinding</key>
 	<string></string>
 	<key>NSRepeatCountBinding</key>
@@ -359,44 +359,53 @@
 	<false/>
 	<key>NSScrollViewShouldScrollUnderTitlebar</key>
 	<false/>
-	<key>NSTableView Columns KeyBingingTable</key>
-	<array>
-		<data>
-		BAtzdHJlYW10eXBlZIHoA4QBQISEhAhOU1N0cmluZwGEhAhOU09iamVjdACF
-		hAErATCG
-		</data>
-		<string>198</string>
-		<data>
-		BAtzdHJlYW10eXBlZIHoA4QBQISEhAhOU1N0cmluZwGEhAhOU09iamVjdACF
-		hAErATGG
-		</data>
-		<string>322</string>
-	</array>
-	<key>NSTableView Hidden Columns KeyBingingTable</key>
-	<array/>
-	<key>NSTableView Sort Ordering KeyBingingTable</key>
-	<array/>
+	<key>NSTableView Columns v2 KeyBingingTable</key>
+	<data>
+	YnBsaXN0MDDUAQIDBAUGNjdYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3AS
+	AAGGoK4HCA8aGxwdHh8gJjAxMlUkbnVsbNIJCgsOWk5TLm9iamVjdHNWJGNsYXNzogwN
+	gAKACoAN0xAJChEVGVdOUy5rZXlzoxITFIADgASABaMWFxiABoAHgAiACVpJZGVudGlm
+	aWVyVVdpZHRoVkhpZGRlblEwI0BowAAAAAAACNIhIiMkWiRjbGFzc25hbWVYJGNsYXNz
+	ZXNcTlNEaWN0aW9uYXJ5oiMlWE5TT2JqZWN00xAJCicrGaMSExSAA4AEgAWjLC0YgAuA
+	DIAIgAlRMSNAdCGdsi0OVtIhIjM0Xk5TTXV0YWJsZUFycmF5ozM1JVdOU0FycmF5XxAP
+	TlNLZXllZEFyY2hpdmVy0Tg5VUFycmF5gAEACAARABoAIwAtADIANwBGAEwAUQBcAGMA
+	ZgBoAGoAbABzAHsAfwCBAIMAhQCJAIsAjQCPAJEAnACiAKkAqwC0ALUAugDFAM4A2wDe
+	AOcA7gDyAPQA9gD4APwA/gEAAQIBBAEGAQ8BFAEjAScBLwFBAUQBSgAAAAAAAAIBAAAA
+	AAAAADoAAAAAAAAAAAAAAAAAAAFM
+	</data>
+	<key>NSTableView Sort Ordering v2 KeyBingingTable</key>
+	<data>
+	YnBsaXN0MDDUAQIDBAUGFBVYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3AS
+	AAGGoKMHCA1VJG51bGzSCQoLDFpOUy5vYmplY3RzViRjbGFzc6CAAtIODxARWiRjbGFz
+	c25hbWVYJGNsYXNzZXNeTlNNdXRhYmxlQXJyYXmjEBITV05TQXJyYXlYTlNPYmplY3Rf
+	EA9OU0tleWVkQXJjaGl2ZXLRFhdVQXJyYXmAAQgRGiMtMjc7QUZRWFlbYGt0g4ePmKqt
+	swAAAAAAAAEBAAAAAAAAABgAAAAAAAAAAAAAAAAAAAC1
+	</data>
+	<key>NSTableView Supports v2 KeyBingingTable</key>
+	<true/>
 	<key>NSToolbar Configuration com.apple.NSColorPanel</key>
 	<dict>
 		<key>TB Is Shown</key>
 		<integer>1</integer>
 	</dict>
-        <key>NSWindow Frame NSFontPanel</key>
-        <string>700 81 655 251 0 0 1440 877 </string>
-	<key>NSWindow Frame SUUpdateAlert</key>
-        <string>410 364 620 392 0 0 1440 877 </string>
+	<key>NSUserKeyEquivalents</key>
+	<dict>
+		<key>Select Next Tab</key>
+		<string>@~→</string>
+		<key>Select Previous Tab</key>
+		<string>@~←</string>
+	</dict>
+	<key>NSWindow Frame NSFontPanel</key>
+	<string>1169 110 445 103 0 0 1680 1027 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-        <string>737 569 796 473 0 0 2560 1417 </string>
-	<key>NSWindow Frame UKCrashReporter</key>
-        <string>0 437 592 372 0 0 1440 877 </string>
+	<string>269 78 918 495 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-        <string>0 303 1440 574 0 0 1440 877 </string>
+	<string>0 431 1680 596 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-        <string>723 356 570 521 0 0 1440 877 </string>
-        <key>NeverWarnAboutShortLivedSessions_CD8AC603-08B4-4262-B110-2D6274BC6AD2</key>
-        <true/>
-        <key>NeverWarnAboutShortLivedSessions_CD8AC603-08B4-4262-B110-2D6274BC6AD2_selection</key>
-        <integer>0</integer>
+	<string>212 101 570 597 0 0 1680 1027 </string>
+	<key>NeverWarnAboutShortLivedSessions_CD8AC603-08B4-4262-B110-2D6274BC6AD2</key>
+	<true/>
+	<key>NeverWarnAboutShortLivedSessions_CD8AC603-08B4-4262-B110-2D6274BC6AD2_selection</key>
+	<integer>0</integer>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -965,7 +974,7 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-                        <string>MesloLGL-RegularForPowerline 12</string>
+			<string>MesloLGL-RegularForPowerline 12</string>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
 			<key>Prompt Before Closing 2</key>
@@ -1015,7 +1024,7 @@
 			<key>Transparency</key>
 			<real>0.0</real>
 			<key>Unlimited Scrollback</key>
-                        <true/>
+			<true/>
 			<key>Use Bold Font</key>
 			<true/>
 			<key>Use Bright Bold</key>
@@ -1607,7 +1616,7 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-                        <string>MesloLGL-RegularForPowerline 12</string>
+			<string>MesloLGL-RegularForPowerline 12</string>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
 			<key>Prompt Before Closing 2</key>
@@ -1655,7 +1664,7 @@
 			<key>Transparency</key>
 			<real>0.0</real>
 			<key>Unlimited Scrollback</key>
-                        <true/>
+			<true/>
 			<key>Use Bold Font</key>
 			<true/>
 			<key>Use Bright Bold</key>
@@ -1674,24 +1683,18 @@
 			<string>/Users/evp</string>
 		</dict>
 	</array>
-        <key>NoSyncDoNotWarnBeforeMultilinePaste</key>
-        <true/>
-        <key>NoSyncDoNotWarnBeforeMultilinePaste_selection</key>
-        <integer>0</integer>
+	<key>NoSyncHaveWarnedAboutPasteConfirmationChange</key>
+	<true/>
 	<key>NoSyncInstallationId</key>
-        <string>9A32678F-956C-49A5-9960-A872D2F92E3D</string>
-        <key>NoSyncNeverRemindPrefsChangesLostForFile</key>
-        <true/>
-        <key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
-        <integer>0</integer>
-        <key>NoSyncPermissionToShowTip</key>
-        <false/>
+	<string>27ED5290-5B35-467B-BD6E-F37D09A7D080</string>
+	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
+	<true/>
+	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
+	<integer>0</integer>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
-        <real>491853902.06914598</real>
-        <key>OnlyWhenMoreTabs</key>
-        <false/>
-        <key>PasteTabToStringTabStopSize</key>
-        <integer>4</integer>
+	<real>503255583.556633</real>
+	<key>OnlyWhenMoreTabs</key>
+	<false/>
 	<key>PointerActions</key>
 	<dict>
 		<key>Button,1,1,,</key>
@@ -1726,19 +1729,19 @@
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-        <string>/Users/vytautasgimbutas/dev/r/dotfiles</string>
-        <key>PromptOnQuit</key>
-        <false/>
+	<string>/Users/vytautasgimbutas/dev/r/dotfiles</string>
+	<key>PromptOnQuit</key>
+	<false/>
 	<key>SUEnableAutomaticChecks</key>
 	<true/>
 	<key>SUFeedAlternateAppNameKey</key>
 	<string>iTerm</string>
 	<key>SUFeedURL</key>
-        <string>https://iterm2.com/appcasts/final.xml?shard=56</string>
+	<string>https://iterm2.com/appcasts/final.xml?shard=93</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-        <date>2016-11-18T19:57:31Z</date>
+	<date>2016-12-12T17:15:11Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowBookmarkName</key>
@@ -1747,18 +1750,18 @@
 	<false/>
 	<key>TabStyle</key>
 	<integer>1</integer>
-	<key>UKCrashReporterLastCrashReportDate</key>
-        <real>1471173632</real>
 	<key>UseBorder</key>
 	<false/>
 	<key>WindowNumber</key>
 	<false/>
+	<key>WordCharacters</key>
+	<string>/-+\~_.</string>
 	<key>findIgnoreCase_iTerm</key>
 	<true/>
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-        <string>3.0.12</string>
+	<string>3.0.12</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>

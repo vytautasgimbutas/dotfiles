@@ -33,7 +33,10 @@ if test ! $(which brew); then
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
+mkdir -p ~/Library/LaunchAgents
+
 # Casks
+brew cask install java
 brew cask install dropbox
 brew cask install alfred
 brew cask install 1password
@@ -68,14 +71,26 @@ brew install coreutils findutils
 brew tap homebrew/dupes
 brew install homebrew/dupes/grep
 
+brew install php70 --with-pear
+brew install --HEAD homebrew/php/php70-memcached
+# not available as of this moment
+    #php70-xhprof
+    #php70-libevent
+    #php70-mysqlnd_ms
+    #php70-protobuf
+    #php70-mcrypt
+    #php70-thrift
+    #php70-zookeeper
+    #php70-crypto
+
 binaries=(
+    carthage
     macvim
     icdiff 
     pandoc 
     moreutils
     watch
     apachetop
-    homebrew/php/boris
     dnsmasq
     freetype
     glib
@@ -88,15 +103,21 @@ binaries=(
     gradle
     mpfr
     percona-server
-    php56-gearman
-    php56-memcached
-    php56-xhprof
-    php56-opcache
-    php56-apcu
-    php56-libevent
-    php56-msgpack
-    php56-mysqlnd_ms
-    php56-protobuf
+
+    php70-amqp
+    php70-imagick
+    php70-igbinary
+    php70-gearman
+    php70-opcache
+    php70-apcu
+    php70-msgpack
+    php70-pdo-pgsql
+    php70-redis
+    php70-intl
+    php70-xdebug
+    
+    homebrew/php/boris
+
     popt
     unixodbc
     zookeeper
@@ -112,10 +133,6 @@ binaries=(
     libxslt
     mcrypt
     node
-    php56-igbinary
-    php56-pdo-pgsql
-    php56-zookeeper
-    postgresql
     readline
     wget
     autoconf
@@ -130,9 +147,6 @@ binaries=(
     libyaml
     memcached
     openssl
-    php56
-    php56-imagick
-    php56-redis
     phpunit
     pwgen
     redis
@@ -147,12 +161,6 @@ binaries=(
     little-cms2
     mercurial
     ossp-uuid
-    php56-amqp
-    php56-mcrypt
-    php56-thrift
-    php56-intl
-    pidof
-    qt
     sbt
     xz
     boost
@@ -165,8 +173,6 @@ binaries=(
     lua
     mhash
     pcre
-    php56-crypto
-    php56-xdebug
     pkg-config
     rabbitmq
     zlib
@@ -174,50 +180,34 @@ binaries=(
     android-ndk
     ngrep
 
-    typesafe-activator
     nginx
+    carthage
     tree
-
-    hadoop
-    spark
-
-    wildfly-as
 )
 
 brew install ${binaries[@]}
 brew cleanup
 
+brew linkapps macvim
+
+brew services start memcached
+brew services start homebrew/php/php70
+brew services start percona-server
+brew services start gearman
+brew services start redis
+brew services start elasticsearch
+brew services start rabbitmq
+brew services start memcached
+brew services start php70
+brew services start nginx
+
 # dnsmasq .dev
 mkdir -pv $(brew --prefix)/etc/
 echo 'address=/.dev/127.0.0.1' > $(brew --prefix)/etc/dnsmasq.conf
 sudo cp -v $(brew --prefix dnsmasq)/homebrew.mxcl.dnsmasq.plist /Library/LaunchDaemons
-sudo launchctl load -w /Library/LaunchDaemons/homebrew.mxcl.dnsmasq.plist
 sudo mkdir -v /etc/resolver
 sudo bash -c 'echo "nameserver 127.0.0.1" > /etc/resolver/dev'
-
-# memcached
-ln -sfv /usr/local/opt/memcached/*.plist ~/Library/LaunchAgents            
-launchctl load ~/Library/LaunchAgents/homebrew.mxcl.memcached.plist
-
-# percona-server
-ln -sfv /usr/local/opt/percona-server/*.plist ~/Library/LaunchAgents
-launchctl load ~/Library/LaunchAgents/homebrew.mxcl.percona-server.plist
-
-# rabbitmq
-ln -sfv /usr/local/opt/rabbitmq/*.plist ~/Library/LaunchAgents
-launchctl load ~/Library/LaunchAgents/homebrew.mxcl.rabbitmq.plist
-
-# elasticsearch
-ln -sfv /usr/local/opt/elasticsearch/*.plist ~/Library/LaunchAgents
-launchctl load ~/Library/LaunchAgents/homebrew.mxcl.elasticsearch.plist
-
-# nginx
-ln -sfv /usr/local/opt/nginx/*.plist ~/Library/LaunchAgents
-launchctl load ~/Library/LaunchAgents/homebrew.mxcl.nginx.plist
-
-# php5-fpm
-ln -sfv /usr/local/opt/php56/*.plist ~/Library/LaunchAgents
-launchctl load ~/Library/LaunchAgents/homebrew.mxcl.php56.plist
+sudo brew services start dnsmasq
 
 # npm
 npm install -g diff-so-fancy
@@ -225,7 +215,6 @@ npm install -g diff-so-fancy
 # rvm
 \curl -sSL https://get.rvm.io | bash -s stable --ruby
 gem install cocoapods
-
 
 # install for each user
 git clone https://github.com/powerline/fonts.git && cd fonts && ./install.sh

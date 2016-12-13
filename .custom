@@ -67,3 +67,5 @@ alias hstop="stop-yarn.sh;stop-dfs.sh"
 function light() {
   highlight -O rtf $2 --syntax $1 --font Inconsolata --style $3 --font-size 24  -W -J 50 -j 3 | pbcopy
 }
+
+source ~/.custom_private
