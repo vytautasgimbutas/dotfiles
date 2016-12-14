@@ -69,7 +69,7 @@ brew cask install skype
 brew install coreutils findutils
 
 brew tap homebrew/dupes
-brew install homebrew/dupes/grep
+brew tap pivotal/tap
 
 brew install php70 --with-pear
 brew install --HEAD homebrew/php/php70-memcached
@@ -84,7 +84,11 @@ brew install --HEAD homebrew/php/php70-memcached
     #php70-crypto
 
 binaries=(
+    homebrew/dupes/grep
+    springboot
+
     carthage
+    swiftlint
     macvim
     icdiff 
     pandoc 
@@ -212,9 +216,10 @@ sudo brew services start dnsmasq
 # npm
 npm install -g diff-so-fancy
 
-# rvm
+# RVM, gems
 \curl -sSL https://get.rvm.io | bash -s stable --ruby
 gem install cocoapods
+gem install fastlane
 
-# install for each user
+# Fonts
 git clone https://github.com/powerline/fonts.git && cd fonts && ./install.sh

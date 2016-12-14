@@ -1,7 +1,6 @@
 # Path settings
 export PATH=~/bin:~/evp/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/usr/X11/bin:/sbin:$HOME/.rvm/bin:/usr/local/share/npm/bin:$HOME/dev/arcanist/arcanist/bin:$HOME/dev/r/pdotfiles/bin
 export PATH=$PATH:~/.composer/vendor/bin
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home
 
 # Wildfly application server
 export JBOSS_HOME=/usr/local/opt/wildfly-as/libexec
