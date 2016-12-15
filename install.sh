@@ -85,10 +85,18 @@ brew install --HEAD homebrew/php/php70-memcached
 
 binaries=(
     homebrew/dupes/grep
+  
     springboot
+    apache-spark
+    hadoop  
+    android-sdk
+    android-ndk
+    maven
+    gradle
 
     carthage
     swiftlint
+
     macvim
     icdiff 
     pandoc 
@@ -103,9 +111,8 @@ binaries=(
     jpeg
     libmemcached
     libxml2
-    maven
-    gradle
     mpfr
+
     percona-server
 
     php70-amqp
@@ -119,12 +126,10 @@ binaries=(
     php70-redis
     php70-intl
     php70-xdebug
-    
     homebrew/php/boris
 
     popt
     unixodbc
-    zookeeper
     apple-gcc42
     cloog
     elasticsearch
@@ -180,12 +185,10 @@ binaries=(
     pkg-config
     rabbitmq
     zlib
-    android-sdk
-    android-ndk
+
     ngrep
 
     nginx
-    carthage
     tree
 )
 
@@ -223,3 +226,7 @@ gem install fastlane
 
 # Fonts
 git clone https://github.com/powerline/fonts.git && cd fonts && ./install.sh
+
+#ssh-agent stuff
+cp $DIR/ssh.add.a.plist ~/Library/LaunchAgents
+launchctl load -w ~/Library/LaunchAgents/ssh.add.a.plist
