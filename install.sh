@@ -223,10 +223,17 @@ npm install -g diff-so-fancy
 \curl -sSL https://get.rvm.io | bash -s stable --ruby
 gem install cocoapods
 gem install fastlane
+gem install backup
 
 # Fonts
 git clone https://github.com/powerline/fonts.git && cd fonts && ./install.sh
 
-#ssh-agent stuff
-cp $DIR/ssh.add.a.plist ~/Library/LaunchAgents
+# custom launch scripts
+cp $DIR/LaunchAgents/ssh.add.a.plist ~/Library/LaunchAgents
 launchctl load -w ~/Library/LaunchAgents/ssh.add.a.plist
+
+cp $DIR/LaunchAgents/backup.plist ~/Library/LaunchAgents
+launchctl load -w ~/Library/LaunchAgents/backup.plist
+
+
+
