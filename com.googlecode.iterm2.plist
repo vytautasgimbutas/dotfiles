@@ -225,6 +225,8 @@
 	<string>CD8AC603-08B4-4262-B110-2D6274BC6AD2</string>
 	<key>DisableFullscreenTransparency</key>
 	<false/>
+	<key>EscapeShellCharsWithBackslash</key>
+	<false/>
 	<key>FlashTabBarInFullscreen</key>
 	<false/>
 	<key>GlobalKeyMap</key>
@@ -403,7 +405,7 @@
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>269 99 796 473 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 431 1680 596 0 0 1680 1027 </string>
+	<string>0 12 1676 1015 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>0 12 1676 1015 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
@@ -1713,6 +1715,16 @@
 	<real>503255583.556633</real>
 	<key>OnlyWhenMoreTabs</key>
 	<false/>
+	<key>PasteSpecialChunkDelay</key>
+	<real>0.01</real>
+	<key>PasteSpecialChunkSize</key>
+	<integer>1024</integer>
+	<key>PasteSpecialRegex</key>
+	<string></string>
+	<key>PasteSpecialSubstitution</key>
+	<string></string>
+	<key>PasteSpecialUseRegexSubstitution</key>
+	<false/>
 	<key>PointerActions</key>
 	<dict>
 		<key>Button,1,1,,</key>
@@ -1759,7 +1771,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-01-13T22:22:38Z</date>
+	<date>2017-03-08T10:32:02Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowBookmarkName</key>
@@ -1784,7 +1796,7 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.0.13</string>
+	<string>3.0.14</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
