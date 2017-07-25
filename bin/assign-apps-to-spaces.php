@@ -103,7 +103,6 @@ foreach ($monitors as $monitor) {
     }
 }
 
-
 foreach ($spaceUuids as $i => $spaceUuid) {
     $spaceAssignments = $assignments[++$i];
 

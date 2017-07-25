@@ -6,10 +6,10 @@ echo "Running Mac OS X custom configuration..."
 sh $DIR/osx.sh
 
 # Link files
-files="bin .vim .vimrc .custom .gitattributes .gitconfig .gitignore .hgignore .hgrc .inputrc .pythonrc"
+declare -a files=("bin" ".vim" ".vimrc" ".custom" ".gitattributes" ".gitconfig" ".gitignore" ".hgignore" ".hgrc" ".inputrc" ".pythonrc")
 echo "\nLinking files..."
-for file in $files; do
-    echo "  Linking $file to ~"
+for file in "${files[@]}"; do
+    echo " Linking $file to ~"
     rm -rf ~/$file
     ln -s $DIR/$file ~/$file
 done
@@ -34,6 +34,9 @@ if test ! $(which brew); then
 fi
 
 mkdir -p ~/Library/LaunchAgents
+
+mkdir -p ~/.android
+touch ~/.android/repositories.cfg
 
 # Casks
 brew cask install java
@@ -64,24 +67,17 @@ brew cask install colorsnapper
 brew cask install deco
 brew cask install docker
 brew cask install skype
+brew cask install android-sdk
+brew cask install android-ndk
 
 # other stuff
-brew install coreutils findutils
+brew install coreutils findutils zlib
 
 brew tap homebrew/dupes
 brew tap pivotal/tap
 
 brew install php70 --with-pear
 brew install --HEAD homebrew/php/php70-memcached
-# not available as of this moment
-    #php70-xhprof
-    #php70-libevent
-    #php70-mysqlnd_ms
-    #php70-protobuf
-    #php70-mcrypt
-    #php70-thrift
-    #php70-zookeeper
-    #php70-crypto
 
 binaries=(
     homebrew/dupes/grep
@@ -89,15 +85,12 @@ binaries=(
     springboot
     apache-spark
     hadoop  
-    android-sdk
-    android-ndk
     maven
     gradle
 
     carthage
     swiftlint
 
-    macvim
     icdiff 
     pandoc 
     moreutils
@@ -130,7 +123,6 @@ binaries=(
 
     popt
     unixodbc
-    apple-gcc42
     cloog
     elasticsearch
     gearman
@@ -184,7 +176,6 @@ binaries=(
     pcre
     pkg-config
     rabbitmq
-    zlib
 
     ngrep
 
@@ -234,6 +225,3 @@ launchctl load -w ~/Library/LaunchAgents/ssh.add.a.plist
 
 cp $DIR/LaunchAgents/backup.plist ~/Library/LaunchAgents
 launchctl load -w ~/Library/LaunchAgents/backup.plist
-
-
-
