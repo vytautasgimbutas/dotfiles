@@ -212,6 +212,7 @@ npm install -g diff-so-fancy
 
 # RVM, gems
 \curl -sSL https://get.rvm.io | bash -s stable --ruby
+rvm install 2.4.1
 gem install cocoapods
 gem install fastlane
 gem install backup
