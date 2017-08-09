@@ -82,6 +82,8 @@ brew install --HEAD homebrew/php/php70-memcached
 binaries=(
     homebrew/dupes/grep
   
+    ansible
+    ngrok
     springboot
     apache-spark
     hadoop  
