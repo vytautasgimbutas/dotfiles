@@ -218,6 +218,7 @@ rvm install 2.4.1
 gem install cocoapods
 gem install fastlane
 gem install backup
+gem install capifony capistrano_rsync_with_remote_cache
 
 # Fonts
 git clone https://github.com/powerline/fonts.git && cd fonts && ./install.sh
