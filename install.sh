@@ -183,6 +183,7 @@ binaries=(
 
     nginx
     tree
+    the_silver_searcher
 )
 
 brew install ${binaries[@]}
@@ -219,6 +220,7 @@ gem install cocoapods
 gem install fastlane
 gem install backup
 gem install capifony capistrano_rsync_with_remote_cache
+gem install synx
 
 # Fonts
 git clone https://github.com/powerline/fonts.git && cd fonts && ./install.sh
