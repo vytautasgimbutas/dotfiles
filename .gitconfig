@@ -11,20 +11,6 @@
 [apply]
     whitespace = fix
 
-[merge]
-	tool = diffmerge
-[mergetool "diffmerge"]
-	cmd = diffmerge --merge --result=$MERGED $LOCAL $BASE $REMOTE
-	trustExitCode = true
-[mergetool]
-	keepBackup = false
-
-[difftool] 
-    prompt = NO 
-    tool = diffmerge
-[difftool "diffmerge"] 
-    cmd = diffmerge "$LOCAL" "$REMOTE" # For DiffMerge
-
 [color]
 	ui = true
 
@@ -56,11 +42,24 @@
 	publish = !legit publish \"$@\"
 	graft = !legit graft \"$@\"
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+
+[mergetool "Kaleidoscope"]
+	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+	trustexitcode = true
+[merge]
+	tool = Kaleidoscope
+[difftool "Kaleidoscope"]
+	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+[difftool]
+	prompt = false
+[mergetool]
+	prompt = false
+	keepBackup = false
+[diff]
+	tool = Kaleidoscope
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
-[push]
-	default = simple
