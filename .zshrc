@@ -64,7 +64,12 @@ ZSH_THEME="agnoster"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
+  ssh-agent
+  history-substring-search
 )
+
+zstyle :omz:plugins:ssh-agent agent-forwarding on
+zstyle :omz:plugins:ssh-agent identities id_home id_rsa_paysera_lan id_rsa_office id_mobile_ci lunahome work_key id_rsa_gsms_lan
 
 source $ZSH/oh-my-zsh.sh
 
@@ -101,6 +106,8 @@ source $HOME/.custom
 if [ -f $HOME/.evp_custom ]; then
     source $HOME/.evp_custom
 fi
+
+
 
 export PATH="/usr/local/opt/php@7.0/sbin:/usr/local/opt/php@7.0/bin:$PATH"
 

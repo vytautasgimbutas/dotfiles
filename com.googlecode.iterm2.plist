@@ -406,6 +406,8 @@
 	</dict>
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>1081 138 445 77 0 0 1680 1027 </string>
+	<key>NSWindow Frame ProfilesPanel</key>
+	<string>274 617 735 382 0 0 1680 1050 </string>
 	<key>NSWindow Frame SUAutomaticUpdateAlert</key>
 	<string>532 639 616 174 0 0 1680 1027 </string>
 	<key>NSWindow Frame SUStatusFrame</key>
@@ -415,13 +417,13 @@
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>269 139 606 469 0 0 1680 1050 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>526 236 1018 447 0 0 1680 1027 </string>
+	<string>739 379 918 512 0 0 1680 1050 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>127 443 592 584 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 512 1680 538 0 0 1680 1050 </string>
+	<string>0 536 1680 514 0 0 1680 1050 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>0 0 836 1050 0 0 1680 1050 </string>
+	<string>844 0 836 1050 0 0 1680 1050 </string>
 	<key>NeverWarnAboutShortLivedSessions_CD8AC603-08B4-4262-B110-2D6274BC6AD2</key>
 	<true/>
 	<key>NeverWarnAboutShortLivedSessions_CD8AC603-08B4-4262-B110-2D6274BC6AD2_selection</key>
@@ -829,7 +831,7 @@
 					<key>Action</key>
 					<integer>11</integer>
 					<key>Text</key>
-					<string>0x1b 0x1b 0x5b 0x44</string>
+					<string>0x1b 0x62</string>
 				</dict>
 				<key>0xf703-0x220000</key>
 				<dict>
@@ -857,7 +859,7 @@
 					<key>Action</key>
 					<integer>11</integer>
 					<key>Text</key>
-					<string>0x1b 0x1b 0x5b 0x43</string>
+					<string>0x1b 0x66</string>
 				</dict>
 				<key>0xf704-0x20000</key>
 				<dict>
@@ -1006,7 +1008,7 @@
 			<key>Screen</key>
 			<integer>-1</integer>
 			<key>Scrollback Lines</key>
-			<integer>1000</integer>
+			<integer>0</integer>
 			<key>Selected Text Color</key>
 			<dict>
 				<key>Blue Component</key>
@@ -1491,7 +1493,7 @@
 					<key>Action</key>
 					<integer>11</integer>
 					<key>Text</key>
-					<string>0x1b 0x1b 0x5b 0x44</string>
+					<string>0x1b 0x62</string>
 				</dict>
 				<key>0xf703-0x220000</key>
 				<dict>
@@ -1519,7 +1521,7 @@
 					<key>Action</key>
 					<integer>11</integer>
 					<key>Text</key>
-					<string>0x1b 0x1b 0x5b 0x43</string>
+					<string>0x1b 0x66</string>
 				</dict>
 				<key>0xf704-0x20000</key>
 				<dict>
@@ -1797,7 +1799,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-10-14T09:42:39Z</date>
+	<date>2018-11-22T13:26:26Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowBookmarkName</key>

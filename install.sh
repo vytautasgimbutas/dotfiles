@@ -15,17 +15,9 @@ for file in "${files[@]}"; do
 done
 
 # zshrc
-git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
-setopt EXTENDED_GLOB
-for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
-  ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
-done
-
-chsh -s /bin/zsh
-
-rm -rf ~/.zshrc ~/.zpreztorc
-ln -s $DIR/zprezto/zshrc ~/.zshrc
-ln -s $DIR/zprezto/zpreztorc ~/.zpreztorc
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+rm -rf ~/.zshrc 
+ln -s $DIR/.zshrc ~/.zshrc
 
 # brew
 if test ! $(which brew); then
