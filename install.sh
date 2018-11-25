@@ -6,7 +6,7 @@ echo "Running Mac OS X custom configuration..."
 sh $DIR/osx.sh
 
 # Link files
-declare -a files=("bin" ".vim" ".vimrc" ".custom" ".gitattributes" ".gitconfig" ".gitignore" ".hgignore" ".hgrc" ".inputrc" ".pythonrc")
+declare -a files=("bin" ".vim" ".vimrc" ".custom" ".gitattributes" ".gitconfig" ".gitignore" ".hgignore" ".hgrc" ".inputrc" ".pythonrc" ".gvimrc")
 echo "\nLinking files..."
 for file in "${files[@]}"; do
     echo " Linking $file to ~"
