@@ -107,7 +107,3 @@ if [ -f $HOME/.evp_custom ]; then
     source $HOME/.evp_custom
 fi
 
-
-
-export PATH="/usr/local/opt/php@7.0/sbin:/usr/local/opt/php@7.0/bin:$PATH"
-
