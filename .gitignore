@@ -3,6 +3,7 @@
 .deco
 
 .vim/backups
+.vim/swaps
 .vim/.netrwhist
 .vim/bundle/mattn-gist-vim/doc/tags
 
