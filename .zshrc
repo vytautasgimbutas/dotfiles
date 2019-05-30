@@ -70,7 +70,7 @@ plugins=(
 )
 
 zstyle :omz:plugins:ssh-agent agent-forwarding on
-zstyle :omz:plugins:ssh-agent identities id_home id_rsa_paysera_lan id_rsa_office id_mobile_ci lunahome work_key id_rsa_gsms_lan
+zstyle :omz:plugins:ssh-agent identities id_home id_rsa_paysera_lan id_rsa_office lunahome work_key id_rsa_gsms_lan
 
 source $ZSH/oh-my-zsh.sh
 
@@ -108,3 +108,6 @@ if [ -f $HOME/.evp_custom ]; then
     source $HOME/.evp_custom
 fi
 
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"

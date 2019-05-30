@@ -6,7 +6,7 @@ echo "Running Mac OS X custom configuration..."
 sh $DIR/osx.sh
 
 # Link files
-declare -a files=("bin" ".vim" ".vimrc" ".custom" ".gitattributes" ".gitconfig" ".gitignore" ".hgignore" ".hgrc" ".inputrc" ".pythonrc" ".gvimrc")
+declare -a files=("bin" ".vim" ".vimrc" ".custom" ".gitconfig" ".gitignore" ".inputrc" ".gvimrc")
 echo "\nLinking files..."
 for file in "${files[@]}"; do
     echo " Linking $file to ~"
@@ -25,65 +25,42 @@ if test ! $(which brew); then
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
-mkdir -p ~/Library/LaunchAgents
-
-mkdir -p ~/.android
-touch ~/.android/repositories.cfg
-
 # Casks
 brew cask install java
+brew cask install android-file-transfer
+brew cask install jetbrains-toolbox
 brew cask install dropbox
 brew cask install alfred
 brew cask install 1password
-brew cask install genymotion
 brew cask install iterm2
 brew cask install moom
 brew cask install rocket-chat
 brew cask install sourcetree
 brew cask install transmission
 brew cask install google-chrome
-brew cask install firefox
 brew cask install diffmerge
-brew cask install calibre
 brew cask install the-unarchiver
-brew cask install trim-enabler
 brew cask install vlc
-brew cask install jd-gui
-brew cask install virtualbox
 brew cask install spotify
-brew cask install bettertouchtool
-brew cask install sketch
-brew cask install android-studio intellij-idea phpstorm appcode macvim
+brew cask install macvim
 brew cask install atom
-brew cask install colorsnapper
-brew cask install deco
-brew cask install docker
 brew cask install skype
-brew cask install android-sdk
-brew cask install android-ndk
+brew cask install slack
+brew cask install teamviewer
+brew cask install reveal
+brew cask install ngrok
 
 # other stuff
 brew install coreutils findutils zlib
 
-brew tap homebrew/dupes
-brew tap pivotal/tap
-
-brew install php70 --with-pear
-brew install --HEAD homebrew/php/php70-memcached
-
 binaries=(
-    homebrew/dupes/grep
-  
     ansible
-    ngrok
-    springboot
     apache-spark
     hadoop  
     maven
     gradle
 
     carthage
-    swiftlint
 
     icdiff 
     pandoc 
@@ -101,19 +78,8 @@ binaries=(
     mpfr
 
     percona-server
-
-    php70-amqp
-    php70-imagick
-    php70-igbinary
-    php70-gearman
-    php70-opcache
-    php70-apcu
-    php70-msgpack
-    php70-pdo-pgsql
-    php70-redis
-    php70-intl
-    php70-xdebug
-    homebrew/php/boris
+    nginx
+    php@7.3
 
     popt
     unixodbc
@@ -132,11 +98,9 @@ binaries=(
     wget
     autoconf
     cmake
-    findutils
     gettext
     go
     htop-osx
-    irssi
     libffi
     libpng
     libyaml
@@ -159,7 +123,6 @@ binaries=(
     sbt
     xz
     boost
-    coreutils
     freetds
     icu4c
     jbig2dec
@@ -170,10 +133,8 @@ binaries=(
     pcre
     pkg-config
     rabbitmq
-
+    rabbitmq-c
     ngrep
-
-    nginx
     tree
     the_silver_searcher
 )
@@ -181,25 +142,23 @@ binaries=(
 brew install ${binaries[@]}
 brew cleanup
 
-brew linkapps macvim
+pecl install imagick redis xdebug amqp igbinary gearman apcu msgpack memcached igbinary
 
-brew services start memcached
-brew services start homebrew/php/php70
+brew services start php
 brew services start percona-server
 brew services start gearman
 brew services start redis
 brew services start elasticsearch
 brew services start rabbitmq
 brew services start memcached
-brew services start php70
 brew services start nginx
 
-# dnsmasq .dev
+# dnsmasq .bar
 mkdir -pv $(brew --prefix)/etc/
-echo 'address=/.dev/127.0.0.1' > $(brew --prefix)/etc/dnsmasq.conf
+echo 'address=/.bar/127.0.0.1' > $(brew --prefix)/etc/dnsmasq.conf
 sudo cp -v $(brew --prefix dnsmasq)/homebrew.mxcl.dnsmasq.plist /Library/LaunchDaemons
 sudo mkdir -v /etc/resolver
-sudo bash -c 'echo "nameserver 127.0.0.1" > /etc/resolver/dev'
+sudo bash -c 'echo "nameserver 127.0.0.1" > /etc/resolver/bar'
 sudo brew services start dnsmasq
 
 # npm
@@ -207,19 +166,10 @@ npm install -g diff-so-fancy
 
 # RVM, gems
 \curl -sSL https://get.rvm.io | bash -s stable --ruby
-rvm install 2.4.1
 gem install cocoapods
 gem install fastlane
-gem install backup
 gem install capifony capistrano_rsync_with_remote_cache
 gem install synx
 
 # Fonts
 git clone https://github.com/powerline/fonts.git && cd fonts && ./install.sh
-
-# custom launch scripts
-cp $DIR/LaunchAgents/ssh.add.a.plist ~/Library/LaunchAgents
-launchctl load -w ~/Library/LaunchAgents/ssh.add.a.plist
-
-cp $DIR/LaunchAgents/backup.plist ~/Library/LaunchAgents
-launchctl load -w ~/Library/LaunchAgents/backup.plist

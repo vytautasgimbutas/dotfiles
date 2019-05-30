@@ -48,6 +48,8 @@ syntax on
 set cursorline
 " Make tabs as wide as two spaces
 set tabstop=4
+
+set expandtab
 " Highlight searches
 set hlsearch
 " Ignore case of searches

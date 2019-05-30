@@ -124,9 +124,6 @@ defaults write com.apple.systemuiserver menuExtras -array \
   "/System/Library/CoreServices/Menu Extras/Battery.menu" \
   "/System/Library/CoreServices/Menu Extras/Clock.menu"
 
-# hide spotlight icon
-sudo chmod 600 /System/Library/CoreServices/Search.bundle/Contents/MacOS/Search
-
 echo ""
 echo "Disabling OS X Gate Keeper"
 echo "(You'll be able to install any app you want from here on, not just Mac App Store apps)"
@@ -336,7 +333,7 @@ defaults write com.apple.messageshelper.MessageController SOInputLineSettings -d
 ###############################################################################
 
 echo ""
-echo "Use `~/Downloads/Incomplete` to store incomplete downloads"
+echo "Use ~/Downloads/Incomplete to store incomplete downloads"
 mkdir -p ~/Downloads/Incomplete
 defaults write org.m0k.transmission UseIncompleteDownloadFolder -bool true
 defaults write org.m0k.transmission IncompleteDownloadFolder -string "${HOME}/Downloads/Incomplete"
@@ -369,8 +366,6 @@ sudo pmset -a sms 0
 echo ""
 echo "Disable annoying backswipe in Chrome"
 defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool false
-
-launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist
 
 find ~/Library/Application\ Support/Dock -name "*.db" -maxdepth 1 -delete
 echo "Restart"
