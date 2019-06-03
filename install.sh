@@ -59,6 +59,7 @@ binaries=(
     hadoop  
     maven
     gradle
+    telnet
 
     carthage
 
@@ -77,6 +78,7 @@ binaries=(
     libxml2
     mpfr
 
+    deployer
     percona-server
     nginx
     php@7.3
