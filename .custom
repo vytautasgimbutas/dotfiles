@@ -1,6 +1,7 @@
 # Path settings
 export PATH=~/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/usr/X11/bin:/sbin:$HOME/.rvm/bin:/usr/local/share/npm/bin:$HOME/dev/r/pdotfiles/bin
 export PATH=$PATH:~/.composer/vendor/bin
+export ANDROID_HOME=/Users/vytautasgimbutas/Library/Android/sdk
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
