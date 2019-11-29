@@ -139,6 +139,7 @@ binaries=(
     ngrep
     tree
     the_silver_searcher
+    switchaudio-osx
 )
 
 brew install ${binaries[@]}

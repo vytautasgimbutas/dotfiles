@@ -1,5 +1,5 @@
 [user]
-	email = vytautas@gimbutas.net
+	email = v.gimbutas@paysera.com
 	name = Vytautas Gimbutas
 
 [alias]
@@ -202,3 +202,5 @@
 [mergetool "sourcetree"]
 	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
+[commit]
+	template = /Users/vytautasgimbutas/.stCommitMsg
