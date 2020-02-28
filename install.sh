@@ -6,7 +6,7 @@ echo "Running Mac OS X custom configuration..."
 sh $DIR/osx.sh
 
 # Link files
-declare -a files=("bin" ".vim" ".vimrc" ".custom" ".gitconfig" ".gitignore" ".inputrc" ".gvimrc")
+declare -a files=(".vim" ".ssh" ".vimrc" ".custom" ".gitconfig" ".gitignore" ".inputrc" ".gvimrc")
 echo "\nLinking files..."
 for file in "${files[@]}"; do
     echo " Linking $file to ~"
@@ -53,10 +53,10 @@ brew cask install ngrok
 # other stuff
 brew install coreutils findutils zlib
 
+brew tap tmspzz/tap https://github.com/tmspzz/homebrew-tap.git
+
 binaries=(
     ansible
-    apache-spark
-    hadoop  
     maven
     gradle
     telnet
@@ -126,12 +126,14 @@ binaries=(
     xz
     boost
     freetds
+    tmspzz/homebrew-tap/rome
     icu4c
     jbig2dec
     libksba
     libtool
     lua
     mhash
+    mono0926/license-plist/license-plist
     pcre
     pkg-config
     rabbitmq
