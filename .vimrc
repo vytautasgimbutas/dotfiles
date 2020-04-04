@@ -48,6 +48,7 @@ syntax on
 set cursorline
 " Make tabs as wide as two spaces
 set tabstop=4
+set shiftwidth=4
 
 set expandtab
 " Highlight searches
@@ -103,3 +104,12 @@ if has("autocmd")
 	" Treat .md files as Markdown
 	autocmd BufNewFile,BufRead *.md setlocal filetype=markdown
 endif
+
+nnoremap x "_x
+nnoremap d "_d
+nnoremap D "_D
+vnoremap d "_d
+
+nnoremap <leader>d ""d
+nnoremap <leader>D ""D
+vnoremap <leader>d ""d
