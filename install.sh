@@ -59,6 +59,10 @@ binaries=(
     ansible
     maven
     gradle
+    fd
+    bat
+    rg
+    youtube-dl
     telnet
 
     carthage
