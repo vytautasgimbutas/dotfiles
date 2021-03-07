@@ -204,3 +204,8 @@
 	trustExitCode = true
 [commit]
 	template = /Users/vytautasgimbutas/.stCommitMsg
+
+[credential]
+    helper = osxkeychain
+[credential "https://github.com"]
+    username = vytautasgimbutas 
