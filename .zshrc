@@ -70,7 +70,7 @@ plugins=(
 )
 
 zstyle :omz:plugins:ssh-agent agent-forwarding on
-zstyle :omz:plugins:ssh-agent identities id_home id_rsa_office 
+zstyle :omz:plugins:ssh-agent identities id_home id_luna
 
 source $ZSH/oh-my-zsh.sh
 

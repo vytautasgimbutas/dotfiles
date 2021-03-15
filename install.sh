@@ -1,5 +1,6 @@
 #!/bin/zsh
-# zshrc
+
+# oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 # brew
@@ -10,7 +11,7 @@ fi
 
 brew install ansible
 
-# run playbook and move everything below to it
+# TODO: run playbook and move everything below to it
 
 # npm
 npm install -g diff-so-fancy
