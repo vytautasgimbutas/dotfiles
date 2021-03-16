@@ -65,12 +65,8 @@ ZSH_THEME="robbyrussell"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
-  ssh-agent
   history-substring-search
 )
-
-zstyle :omz:plugins:ssh-agent agent-forwarding on
-zstyle :omz:plugins:ssh-agent identities id_home id_luna
 
 source $ZSH/oh-my-zsh.sh
 

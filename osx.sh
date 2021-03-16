@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Mouse sensitivity
+defaults write .GlobalPreferences com.apple.mouse.scaling -int 0.875
+
 # Show path bar in finder
 defaults write com.apple.finder ShowPathbar -bool true
 
@@ -369,4 +372,3 @@ defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool false
 
 find ~/Library/Application\ Support/Dock -name "*.db" -maxdepth 1 -delete
 echo "Restart"
-

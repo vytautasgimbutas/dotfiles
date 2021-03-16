@@ -11,10 +11,11 @@ fi
 
 brew install ansible
 
-# TODO: run playbook and move everything below to it
+# todo ssh-add plist
+# ➜  ~ sudo launchctl load ~/Library/LaunchAgents/ssh-add.plist
+# ➜  ~ sudo chown root:wheel ~/Library/LaunchAgents/ssh-add.plist
 
-# npm
-npm install -g diff-so-fancy
+# TODO: run playbook and move everything below to it
 
 # RVM, gems
 \curl -sSL https://get.rvm.io | bash -s stable --ruby
@@ -24,4 +25,4 @@ gem install fastlane
 gem install synx
 
 # Fonts
-git clone https://github.com/powerline/fonts.git && cd fonts && ./install.sh && cd .. && rm -rf fonts
+git clone https://github.com/powerline/fonts.git && ./fonts/install.sh && rm -rf fonts
