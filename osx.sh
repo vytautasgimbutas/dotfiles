@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Mouse sensitivity
-defaults write .GlobalPreferences com.apple.mouse.scaling -int 0.875
+defaults write .GlobalPreferences com.apple.mouse.scaling -float 0.875
 
 # Show path bar in finder
 defaults write com.apple.finder ShowPathbar -bool true

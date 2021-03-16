@@ -1,0 +1,146 @@
+---
+downloads: ~/.ansible-downloads/
+
+configure_dotfiles: true
+configure_terminal: false
+configure_osx: true
+
+configure_sudoers: true
+sudoers_custom_config: '%admin ALL=(ALL) NOPASSWD: ALL'
+
+dotfiles_repo: git@github.com:vytautasgimbutas/dotfiles.git
+dotfiles_repo_accept_hostkey: true
+dotfiles_repo_local_destination: ~/dev/r/dotfiles
+dotfiles_files:
+  - .vim
+  - .vimrc
+  - .custom
+  - .gitconfig
+  - .gitignore
+  - .inputrc
+  - .gvimrc
+  - .zshrc
+
+homebrew_installed_packages:
+  - autoconf
+  - bash-completion
+  - httpie
+  - libevent
+  - mcrypt
+  - ssh-copy-id
+  - readline
+  - wget
+  - coreutils
+  - findutils
+  - zlib
+  - telnet
+  - gradle
+  - fd
+  - bat
+  - rg
+  - youtube-dl
+  - icdiff
+  - pandoc
+  - moreutils
+  - watch
+  - freetype
+  - glib
+  - grep
+  - imagemagick
+  - jpeg
+  - mpfr
+  - node
+  - go
+  - htop-osx
+  - openssl
+  - pwgen
+  - composer
+  - graphviz
+  - sbt
+  - xz
+  - the_silver_searcher
+  - switchaudio-osx
+  - tree
+  - ngrep
+  - icu4c
+  - helm
+  - k9s
+  - kube-ps1
+  - minikube
+  - kubectx
+
+homebrew_taps:
+  - homebrew/core
+  - homebrew/cask
+  - AdoptOpenJDK/openjdk
+
+homebrew_cask_appdir: /Applications
+homebrew_cask_apps:
+  - 1password
+  - rectangle
+  - zoom
+  - zeplin
+  - docker
+  - dropbox
+  - firefox
+  - google-chrome
+  - slack
+  - adoptopenjdk
+  - jetbrains-toolbox
+  - iterm2
+  - adobe-creative-cloud
+  - sourcetree
+  - transmission
+  - diffmerge
+  - the-unarchiver
+  - vlc
+  - macvim
+  - atom
+  - skype
+  - teamviewer
+  - reveal
+  - ngrok
+  - toggl-track
+  - timemachineeditor
+  - proxyman
+  - pritunl
+  - postman
+  - notion
+  - microsoft-teams
+  - macdown
+  - loom
+  - messenger
+  - bettertouchtool
+  - balenaetcher
+  - coconutbattery
+  - mongodb-realm-studio
+
+# See `geerlingguy.mas` role documentation for usage instructions.
+mas_installed_apps:
+  - { id: 497799835, name: "Xcode" }
+  - { id: 975937182, name: "Fantastical" }
+  - { id: 1482454543, name: "Twitter" }
+  - { id: 1278508951, name: "Trello" }
+  - { id: 1176895641, name: "Spark" }
+  - { id: 747648890, name: "Telegram" }
+  - { id: 1402042596, name: "Adblock Safari" }
+  - { id: 640199958, name: "Apple Developer" }
+  - { id: 642858547, name: "Fingerworks" }
+  - { id: 1444383602, name: "Goodnotes" }
+  - { id: 409203825, name: "Numbers" }
+  - { id: 409201541, name: "Pages" }
+  - { id: 409183694, name: "Keynote" }
+  - { id: 1475897096, name: "Jira" }
+  - { id: 1099568401, name: "Home Assistant" }
+  - { id: 288545208, name: "Instapaper" }
+
+osx_script: "~/dev/r/dotfiles/osx.sh"
+
+composer_packages: []
+gem_packages: []
+npm_packages:
+  - name: diff-so-fancy
+    state: present
+pip_packages: []
+
+post_provision_tasks: []
