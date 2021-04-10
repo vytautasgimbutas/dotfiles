@@ -40,7 +40,6 @@ homebrew_installed_packages:
   - rg
   - youtube-dl
   - icdiff
-  - pandoc
   - moreutils
   - watch
   - freetype
