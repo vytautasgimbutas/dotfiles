@@ -132,6 +132,7 @@ mas_installed_apps:
   - { id: 1475897096, name: "Jira" }
   - { id: 1099568401, name: "Home Assistant" }
   - { id: 288545208, name: "Instapaper" }
+  - { id: 904280696, name: "Things" }
 
 osx_script: "~/dev/r/dotfiles/osx.sh"
 
