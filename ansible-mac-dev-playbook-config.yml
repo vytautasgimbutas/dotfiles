@@ -22,6 +22,7 @@ dotfiles_files:
   - .zshrc
 
 homebrew_installed_packages:
+  - restic
   - autoconf
   - bash-completion
   - httpie
