@@ -4,6 +4,8 @@ downloads: ~/.ansible-downloads/
 configure_dotfiles: true
 configure_terminal: false
 configure_osx: true
+configure_sublime: false
+configure_dock: false
 
 configure_sudoers: true
 sudoers_custom_config: '%admin ALL=(ALL) NOPASSWD: ALL'
@@ -118,6 +120,7 @@ homebrew_cask_apps:
 
 # See `geerlingguy.mas` role documentation for usage instructions.
 mas_installed_apps:
+  - { id: 360593530, name: "Notability" }
   - { id: 497799835, name: "Xcode" }
   - { id: 975937182, name: "Fantastical" }
   - { id: 1482454543, name: "Twitter" }
@@ -131,9 +134,7 @@ mas_installed_apps:
   - { id: 409203825, name: "Numbers" }
   - { id: 409201541, name: "Pages" }
   - { id: 409183694, name: "Keynote" }
-  - { id: 1475897096, name: "Jira" }
   - { id: 1099568401, name: "Home Assistant" }
-  - { id: 288545208, name: "Instapaper" }
   - { id: 904280696, name: "Things" }
 
 osx_script: "~/dev/r/dotfiles/osx.sh"
