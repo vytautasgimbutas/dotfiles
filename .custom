@@ -2,6 +2,7 @@
 export PATH=~/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/usr/X11/bin:/sbin:$HOME/.rvm/bin:/usr/local/share/npm/bin:$HOME/dev/r/pdotfiles/bin
 export PATH=$PATH:~/.composer/vendor/bin
 export PATH=$PATH:~/.platformio/penv/bin
+export PATH=$PATH:/opt/homebrew/bin
 export ANDROID_HOME=/Users/vytautasgimbutas/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
