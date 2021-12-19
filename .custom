@@ -3,7 +3,8 @@ export PATH=~/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/usr/X1
 export PATH=$PATH:~/.composer/vendor/bin
 export PATH=$PATH:~/.platformio/penv/bin
 export PATH=$PATH:/opt/homebrew/bin
-export ANDROID_HOME=/Users/vytautasgimbutas/Library/Android/sdk
+export PATH=$PATH:$HOME/.symfony/bin
+export ANDROID_HOME=$HOME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
