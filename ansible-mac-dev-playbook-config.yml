@@ -116,6 +116,7 @@ homebrew_cask_apps:
   - bettertouchtool
   - balenaetcher
   - coconutbattery
+  - maccy
   - mongodb-realm-studio
 
 # See `geerlingguy.mas` role documentation for usage instructions.
