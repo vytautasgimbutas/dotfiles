@@ -78,13 +78,17 @@ homebrew_taps:
 
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
+  - guitar-pro
   - 1password
-  - alfred
+  - dropbox
+  - maccy
+  - raspberry-pi-imager
+  - gifox
   - rectangle
+  - alfred
   - zoom
   - zeplin
   - docker
-  - dropbox
   - firefox
   - google-chrome
   - slack
@@ -103,12 +107,12 @@ homebrew_cask_apps:
   - teamviewer
   - reveal
   - ngrok
+  - notion
   - toggl-track
   - timemachineeditor
   - proxyman
   - pritunl
   - postman
-  - notion
   - microsoft-teams
   - macdown
   - loom
@@ -116,8 +120,6 @@ homebrew_cask_apps:
   - bettertouchtool
   - balenaetcher
   - coconutbattery
-  - maccy
-  - mongodb-realm-studio
 
 # See `geerlingguy.mas` role documentation for usage instructions.
 mas_installed_apps:
@@ -137,6 +139,7 @@ mas_installed_apps:
   - { id: 409183694, name: "Keynote" }
   - { id: 1099568401, name: "Home Assistant" }
   - { id: 904280696, name: "Things" }
+  - { id: 1435957248, name: "Drafts" }
 
 osx_script: "~/dev/r/dotfiles/osx.sh"
 
