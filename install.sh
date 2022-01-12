@@ -11,15 +11,15 @@ fi
 
 brew install ansible
 
-# todo ssh-add plist
-# ➜  ~ sudo launchctl load ~/Library/LaunchAgents/ssh-add.plist
-# ➜  ~ sudo chown root:wheel ~/Library/LaunchAgents/ssh-add.plist
+cp ssh-add.plist ~/Library/LaunchAgents/ssh-add.plist
+sudo chown root:wheel ~/Library/LaunchAgents/ssh-add.plist
+sudo launchctl load ~/Library/LaunchAgents/ssh-add.plist
 
 # TODO: run playbook and move everything below to it
 
 # RVM, gems
 \curl -sSL https://get.rvm.io | bash -s stable --ruby
-export PATH="$PATH:$HOME/.rvm/bin"
+source $HOME/.rvm/scripts/rvm
 gem install cocoapods
 gem install fastlane
 gem install synx
