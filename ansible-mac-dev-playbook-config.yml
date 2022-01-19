@@ -123,6 +123,7 @@ homebrew_cask_apps:
   - bettertouchtool
   - balenaetcher
   - coconutbattery
+  - adguard
 
 # See `geerlingguy.mas` role documentation for usage instructions.
 mas_installed_apps:
@@ -133,7 +134,6 @@ mas_installed_apps:
   - { id: 1278508951, name: "Trello" }
   - { id: 1176895641, name: "Spark" }
   - { id: 747648890, name: "Telegram" }
-  - { id: 1402042596, name: "Adblock Safari" }
   - { id: 640199958, name: "Apple Developer" }
   - { id: 642858547, name: "Fingerworks" }
   - { id: 1444383602, name: "Goodnotes" }
