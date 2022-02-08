@@ -98,7 +98,6 @@ homebrew_cask_apps:
   - adoptopenjdk
   - jetbrains-toolbox
   - iterm2
-  - adobe-creative-cloud
   - sourcetree
   - transmission
   - diffmerge
@@ -123,6 +122,7 @@ homebrew_cask_apps:
   - bettertouchtool
   - balenaetcher
   - coconutbattery
+  - awscli
   - adguard
 
 # See `geerlingguy.mas` role documentation for usage instructions.
@@ -143,6 +143,7 @@ mas_installed_apps:
   - { id: 1099568401, name: "Home Assistant" }
   - { id: 904280696, name: "Things" }
   - { id: 1435957248, name: "Drafts" }
+  - { id: 1013231476, name: "Google Meet" }
 
 osx_script: "~/dev/r/dotfiles/osx.sh"
 
