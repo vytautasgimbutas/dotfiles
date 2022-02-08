@@ -8,7 +8,7 @@ configure_sublime: false
 configure_dock: false
 
 configure_sudoers: true
-sudoers_custom_config: '%admin ALL=(ALL) NOPASSWD: ALL'
+sudoers_custom_config: 'vytautasgimbutas ALL=(ALL) NOPASSWD: ALL'
 
 dotfiles_repo: git@github.com:vytautasgimbutas/dotfiles.git
 dotfiles_repo_accept_hostkey: true
