@@ -143,6 +143,7 @@ mas_installed_apps:
   - { id: 1099568401, name: "Home Assistant" }
   - { id: 904280696, name: "Things" }
   - { id: 1435957248, name: "Drafts" }
+  - { id: 1019371109, name: "Balance Lock" }
 
 osx_script: "~/dev/r/dotfiles/osx.sh"
 
