@@ -105,7 +105,6 @@ homebrew_cask_apps:
   - the-unarchiver
   - vlc
   - macvim
-  - atom
   - skype
   - teamviewer
   - reveal
