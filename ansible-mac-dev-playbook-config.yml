@@ -24,6 +24,7 @@ dotfiles_files:
   - .zshrc
 
 homebrew_installed_packages:
+  - symfony-cli/tap/symfony-cli
   - awscli
   - restic
   - autoconf
