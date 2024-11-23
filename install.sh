@@ -6,11 +6,12 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 # brew
 if test ! $(which brew); then
   echo "Installing homebrew..."
-  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
-brew install ansible
+/opt/homebrew/bin/brew install ansible
 
+mkdir -p ~/Library/LaunchAgents
 cp ssh-add.plist ~/Library/LaunchAgents/ssh-add.plist
 sudo chown root:wheel ~/Library/LaunchAgents/ssh-add.plist
 sudo launchctl load ~/Library/LaunchAgents/ssh-add.plist

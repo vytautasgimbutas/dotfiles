@@ -1,6 +1,4 @@
 ---
-downloads: ~/.ansible-downloads/
-
 configure_dotfiles: true
 configure_terminal: false
 configure_osx: true
@@ -26,12 +24,10 @@ dotfiles_files:
 homebrew_installed_packages:
   - symfony-cli/tap/symfony-cli
   - awscli
-  - restic
   - autoconf
   - bash-completion
   - httpie
   - libevent
-  - mcrypt
   - ssh-copy-id
   - readline
   - wget
@@ -43,7 +39,6 @@ homebrew_installed_packages:
   - fd
   - bat
   - rg
-  - youtube-dl
   - icdiff
   - moreutils
   - watch
@@ -67,32 +62,31 @@ homebrew_installed_packages:
   - tree
   - ngrep
   - icu4c
-  - helm
-  - k9s
-  - kube-ps1
-  - minikube
-  - kubectx
+  #- helm
+  #- k9s
+  #- kube-ps1
+  #- minikube
+  #- kubectx
 
 homebrew_taps:
-  - homebrew/core
-  - homebrew/cask
   - AdoptOpenJDK/openjdk
+  - symfony-cli/tap
 
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
-  - devutils
+  #- devutils
+  - parallels
   - pitch
   - spotify
-  - guitar-pro
   - 1password
   - dropbox
-  - maccy
+  #- maccy
   - raspberry-pi-imager
-  - gifox
+  #- gifox
   - rectangle
   - alfred
   - zoom
-  - zeplin
+  #- zeplin
   - docker
   - firefox
   - google-chrome
@@ -106,45 +100,56 @@ homebrew_cask_apps:
   - the-unarchiver
   - vlc
   - macvim
-  - skype
   - teamviewer
-  - reveal
-  - ngrok
+  #- reveal
+  #- ngrok
   - notion
-  - toggl-track
   - timemachineeditor
   - proxyman
   - pritunl
   - postman
   - microsoft-teams
-  - macdown
   - loom
   - messenger
-  - bettertouchtool
+  #- bettertouchtool
   - balenaetcher
-  - coconutbattery
+  - android-file-transfer
   - adguard
   - hiddenbar
+  - balance-lock
+  - bluos-controller
+  - cursor
+  - garmin-express
+  - inkscape
+  - angry-ip-scanner
+  - fantastical
+  - linear-linear
+  - mqtt-explorer
+  - mqttx
+  - nordvpn
+  - openvpn-connect
+  - readdle-spark
+  - logitech-g-hub
+  - zwift
+  - tailscale
+  - zed
+  - wifiman
+  - whatsapp
+  - warp
+  - visual-studio-code
+  - viber
+  - telegram
+  - raycast
+
 
 # See `geerlingguy.mas` role documentation for usage instructions.
 mas_installed_apps:
-  - { id: 360593530, name: "Notability" }
   - { id: 497799835, name: "Xcode" }
-  - { id: 975937182, name: "Fantastical" }
-  - { id: 1482454543, name: "Twitter" }
   - { id: 1278508951, name: "Trello" }
-  - { id: 1176895641, name: "Spark" }
-  - { id: 747648890, name: "Telegram" }
-  - { id: 640199958, name: "Apple Developer" }
-  - { id: 642858547, name: "Fingerworks" }
-  - { id: 1444383602, name: "Goodnotes" }
   - { id: 409203825, name: "Numbers" }
   - { id: 409201541, name: "Pages" }
   - { id: 409183694, name: "Keynote" }
-  - { id: 1099568401, name: "Home Assistant" }
   - { id: 904280696, name: "Things" }
-  - { id: 1435957248, name: "Drafts" }
-  - { id: 1019371109, name: "Balance Lock" }
 
 osx_script: "~/dev/r/dotfiles/osx.sh"
 
