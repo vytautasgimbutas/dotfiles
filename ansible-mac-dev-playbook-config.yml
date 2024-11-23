@@ -79,6 +79,7 @@ homebrew_cask_apps:
   - pitch
   - spotify
   - 1password
+  - google-drive
   - dropbox
   #- maccy
   - raspberry-pi-imager

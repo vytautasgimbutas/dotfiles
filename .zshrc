@@ -106,6 +106,4 @@ export PATH="$PATH:$HOME/.rvm/bin"
 
 [[ -e ~/.phpbrew/bashrc ]] && source ~/.phpbrew/bashrc
 
-source "/opt/homebrew/share/kube-ps1.sh"
-PS1='$(kube_ps1)'$PS1
 export PATH="/usr/local/opt/openjdk/bin:$PATH"
