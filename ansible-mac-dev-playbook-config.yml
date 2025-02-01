@@ -132,7 +132,6 @@ homebrew_cask_apps:
   - readdle-spark
   - logitech-g-hub
   - zwift
-  - tailscale
   - zed
   - wifiman
   - whatsapp
